@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB6FE7CA28D40A7F008A683E /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = AB6FE7C928D40A7F008A683E /* Algorithms */; };
+		AB6FE7CC28D49CF7008A683E /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6FE7CB28D49CF7008A683E /* SwiftUIView.swift */; };
 		ABBBC5AF28D351E700AF7895 /* SmelliciousTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBBC5AE28D351E700AF7895 /* SmelliciousTestApp.swift */; };
 		ABBBC5B128D351E700AF7895 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBBC5B028D351E700AF7895 /* ContentView.swift */; };
 		ABBBC5B328D351E800AF7895 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABBBC5B228D351E800AF7895 /* Assets.xcassets */; };
@@ -14,6 +16,10 @@
 		ABBBC5C028D351E800AF7895 /* SmelliciousTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBBC5BF28D351E800AF7895 /* SmelliciousTestTests.swift */; };
 		ABBBC5CA28D351E800AF7895 /* SmelliciousTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBBC5C928D351E800AF7895 /* SmelliciousTestUITests.swift */; };
 		ABBBC5CC28D351E800AF7895 /* SmelliciousTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBBC5CB28D351E800AF7895 /* SmelliciousTestUITestsLaunchTests.swift */; };
+		ABBBC5DB28D3528300AF7895 /* EssenceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBBC5DA28D3528300AF7895 /* EssenceModel.swift */; };
+		ABBBC5DD28D3529800AF7895 /* SizeComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBBC5DC28D3529800AF7895 /* SizeComponents.swift */; };
+		ABBBC5E028D3536500AF7895 /* CombineEssencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBBC5DF28D3536500AF7895 /* CombineEssencesView.swift */; };
+		ABBBC5E328D3543900AF7895 /* CombineEssencesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBBC5E228D3543900AF7895 /* CombineEssencesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB6FE7CB28D49CF7008A683E /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		ABBBC5AB28D351E700AF7895 /* SmelliciousTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmelliciousTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABBBC5AE28D351E700AF7895 /* SmelliciousTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmelliciousTestApp.swift; sourceTree = "<group>"; };
 		ABBBC5B028D351E700AF7895 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +51,10 @@
 		ABBBC5C528D351E800AF7895 /* SmelliciousTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmelliciousTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABBBC5C928D351E800AF7895 /* SmelliciousTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmelliciousTestUITests.swift; sourceTree = "<group>"; };
 		ABBBC5CB28D351E800AF7895 /* SmelliciousTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmelliciousTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ABBBC5DA28D3528300AF7895 /* EssenceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssenceModel.swift; sourceTree = "<group>"; };
+		ABBBC5DC28D3529800AF7895 /* SizeComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeComponents.swift; sourceTree = "<group>"; };
+		ABBBC5DF28D3536500AF7895 /* CombineEssencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineEssencesView.swift; sourceTree = "<group>"; };
+		ABBBC5E228D3543900AF7895 /* CombineEssencesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineEssencesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB6FE7CA28D40A7F008A683E /* Algorithms in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +106,11 @@
 		ABBBC5AD28D351E700AF7895 /* SmelliciousTest */ = {
 			isa = PBXGroup;
 			children = (
+				ABBBC5E128D353EA00AF7895 /* View Model */,
+				ABBBC5DE28D3533400AF7895 /* View */,
+				ABBBC5D928D3525C00AF7895 /* Components */,
+				ABBBC5D828D3524B00AF7895 /* Model */,
 				ABBBC5AE28D351E700AF7895 /* SmelliciousTestApp.swift */,
-				ABBBC5B028D351E700AF7895 /* ContentView.swift */,
 				ABBBC5B228D351E800AF7895 /* Assets.xcassets */,
 				ABBBC5B428D351E800AF7895 /* Preview Content */,
 			);
@@ -127,6 +142,40 @@
 			path = SmelliciousTestUITests;
 			sourceTree = "<group>";
 		};
+		ABBBC5D828D3524B00AF7895 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ABBBC5DA28D3528300AF7895 /* EssenceModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ABBBC5D928D3525C00AF7895 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				ABBBC5DC28D3529800AF7895 /* SizeComponents.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		ABBBC5DE28D3533400AF7895 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ABBBC5B028D351E700AF7895 /* ContentView.swift */,
+				ABBBC5DF28D3536500AF7895 /* CombineEssencesView.swift */,
+				AB6FE7CB28D49CF7008A683E /* SwiftUIView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ABBBC5E128D353EA00AF7895 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				ABBBC5E228D3543900AF7895 /* CombineEssencesViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +192,9 @@
 			dependencies = (
 			);
 			name = SmelliciousTest;
+			packageProductDependencies = (
+				AB6FE7C928D40A7F008A683E /* Algorithms */,
+			);
 			productName = SmelliciousTest;
 			productReference = ABBBC5AB28D351E700AF7895 /* SmelliciousTest.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +267,9 @@
 				Base,
 			);
 			mainGroup = ABBBC5A228D351E700AF7895;
+			packageReferences = (
+				AB6FE7C828D40A7F008A683E /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+			);
 			productRefGroup = ABBBC5AC28D351E700AF7895 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,6 +312,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABBBC5DD28D3529800AF7895 /* SizeComponents.swift in Sources */,
+				AB6FE7CC28D49CF7008A683E /* SwiftUIView.swift in Sources */,
+				ABBBC5E328D3543900AF7895 /* CombineEssencesViewModel.swift in Sources */,
+				ABBBC5E028D3536500AF7895 /* CombineEssencesView.swift in Sources */,
+				ABBBC5DB28D3528300AF7895 /* EssenceModel.swift in Sources */,
 				ABBBC5B128D351E700AF7895 /* ContentView.swift in Sources */,
 				ABBBC5AF28D351E700AF7895 /* SmelliciousTestApp.swift in Sources */,
 			);
@@ -577,6 +637,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AB6FE7C828D40A7F008A683E /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AB6FE7C928D40A7F008A683E /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB6FE7C828D40A7F008A683E /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ABBBC5A328D351E700AF7895 /* Project object */;
 }
