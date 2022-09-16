@@ -13,8 +13,9 @@ func ResetButton() -> some View {
         
     }label: {
         Image(systemName: "arrow.clockwise")
-        Text("reset")
+            .resizable()
     }
+    .foregroundColor(Color.init( red: 0.19, green: 0.28, blue: 0.23))
     
 }
 
