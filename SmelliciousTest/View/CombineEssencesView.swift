@@ -18,7 +18,7 @@ struct CombineEssencesView: View {
                 Color.init( red: 1, green: 0.92, blue: 0.93 )
                     .edgesIgnoringSafeArea(.all)
                 VStack(spacing: 0) {
-                    LottieView(name: "default-smoke", loopMode: .loop)
+                    LottieView(name: "defaultSmoke", loopMode: .loop)
                         .frame(width: 250, height: 250)
                         .opacity(0.50)
                     Difusor()
@@ -27,7 +27,7 @@ struct CombineEssencesView: View {
                     VStack {
                         HStack(spacing: 31) {
                             DropArea()
-                            DropArea()
+                            DropArea2()
                         }
                         Divider()
                             .frame(width:330)
