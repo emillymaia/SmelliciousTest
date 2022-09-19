@@ -11,7 +11,7 @@ import SwiftUI
 struct SmelliciousTestApp: App {
     var body: some Scene {
         WindowGroup {
-            CombineEssencesView()
+            SwiftUIView()
         }
     }
 }

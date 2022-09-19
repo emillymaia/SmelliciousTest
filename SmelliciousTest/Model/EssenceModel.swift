@@ -41,4 +41,5 @@ var essences_: [EssenceModel] = [
     EssenceModel(value: "Algodão", icon: "Algodao", smokeColor:"Creme"),
     EssenceModel(value: "Flor de Cerejeira", icon: "Cerejeira", smokeColor: "Rosa"),
     EssenceModel(value: "Coco", icon: "Coco", smokeColor:"Marrom")
+
 ]

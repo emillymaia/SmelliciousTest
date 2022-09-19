@@ -21,14 +21,17 @@ struct CombineEssencesView: View {
                 Color.init( red: 1, green: 0.92, blue: 0.93 )
                     .edgesIgnoringSafeArea(.all)
                 VStack(spacing: 0) {
+
                     LottieView(name: "defaultSmoke", loopMode: .loop)
+
                         .frame(width: 250, height: 250)
-                        .opacity(0.50)
+                        //.opacity(0.50)
                     Difusor()
                         .frame(width: 100, height: 180)
                         .offset(x: 0, y: -20)
                     VStack {
                         HStack(spacing: 31) {
+
                             DropArea { id in
                                 let droppedEssence = essences.first { essence in
                                     return essence.id == id
@@ -44,6 +47,7 @@ struct CombineEssencesView: View {
                                 
                                 essence1 = droppedEssence
                             }                        }
+
                         Divider()
                             .frame(width:330)
                             .padding(.top)

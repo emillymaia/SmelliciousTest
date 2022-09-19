@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0DBACC7428D8882900DAE036 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBACC7328D8882900DAE036 /* LottieView.swift */; };
 		0DBACC7728D889ED00DAE036 /* SmelliciousTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBBC5AE28D351E700AF7895 /* SmelliciousTestApp.swift */; };
+
 		0DBACC8F28D8ABB200DAE036 /* greenSmoke.json in Resources */ = {isa = PBXBuildFile; fileRef = 0DBACC8628D8ABB200DAE036 /* greenSmoke.json */; };
 		0DBACC9028D8ABB200DAE036 /* redSmoke.json in Resources */ = {isa = PBXBuildFile; fileRef = 0DBACC8728D8ABB200DAE036 /* redSmoke.json */; };
 		0DBACC9128D8ABB200DAE036 /* vanillaSmoke.json in Resources */ = {isa = PBXBuildFile; fileRef = 0DBACC8828D8ABB200DAE036 /* vanillaSmoke.json */; };
@@ -18,6 +19,7 @@
 		0DBACC9528D8ABB300DAE036 /* yellowSmoke.json in Resources */ = {isa = PBXBuildFile; fileRef = 0DBACC8C28D8ABB200DAE036 /* yellowSmoke.json */; };
 		0DBACC9628D8ABB300DAE036 /* brownSmoke.json in Resources */ = {isa = PBXBuildFile; fileRef = 0DBACC8D28D8ABB200DAE036 /* brownSmoke.json */; };
 		0DBACC9728D8ABB300DAE036 /* purpleSmoke.json in Resources */ = {isa = PBXBuildFile; fileRef = 0DBACC8E28D8ABB200DAE036 /* purpleSmoke.json */; };
+
 		AB6FE7CA28D40A7F008A683E /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = AB6FE7C928D40A7F008A683E /* Algorithms */; };
 		AB6FE7CC28D49CF7008A683E /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6FE7CB28D49CF7008A683E /* SwiftUIView.swift */; };
 		AB6FE7CE28D4B635008A683E /* CombineEssencesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6FE7CD28D4B635008A683E /* CombineEssencesModel.swift */; };
@@ -53,6 +55,7 @@
 
 /* Begin PBXFileReference section */
 		0DBACC7328D8882900DAE036 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+
 		0DBACC8628D8ABB200DAE036 /* greenSmoke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = greenSmoke.json; sourceTree = "<group>"; };
 		0DBACC8728D8ABB200DAE036 /* redSmoke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = redSmoke.json; sourceTree = "<group>"; };
 		0DBACC8828D8ABB200DAE036 /* vanillaSmoke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vanillaSmoke.json; sourceTree = "<group>"; };
@@ -62,6 +65,7 @@
 		0DBACC8C28D8ABB200DAE036 /* yellowSmoke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = yellowSmoke.json; sourceTree = "<group>"; };
 		0DBACC8D28D8ABB200DAE036 /* brownSmoke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = brownSmoke.json; sourceTree = "<group>"; };
 		0DBACC8E28D8ABB200DAE036 /* purpleSmoke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = purpleSmoke.json; sourceTree = "<group>"; };
+
 		AB6FE7CB28D49CF7008A683E /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		AB6FE7CD28D4B635008A683E /* CombineEssencesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineEssencesModel.swift; sourceTree = "<group>"; };
 		ABBBC5AB28D351E700AF7895 /* SmelliciousTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmelliciousTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +123,7 @@
 				0DBACC8728D8ABB200DAE036 /* redSmoke.json */,
 				0DBACC8828D8ABB200DAE036 /* vanillaSmoke.json */,
 				0DBACC8C28D8ABB200DAE036 /* yellowSmoke.json */,
+
 			);
 			path = Lottie;
 			sourceTree = "<group>";
@@ -336,12 +341,14 @@
 				0DBACC9228D8ABB200DAE036 /* orangeSmoke.json in Resources */,
 				0DBACC8F28D8ABB200DAE036 /* greenSmoke.json in Resources */,
 				ABBBC5B328D351E800AF7895 /* Assets.xcassets in Resources */,
+
 				0DBACC9728D8ABB300DAE036 /* purpleSmoke.json in Resources */,
 				0DBACC9328D8ABB300DAE036 /* pinkSmoke.json in Resources */,
 				0DBACC9428D8ABB300DAE036 /* defaultSmoke.json in Resources */,
 				0DBACC9128D8ABB200DAE036 /* vanillaSmoke.json in Resources */,
 				0DBACC9528D8ABB300DAE036 /* yellowSmoke.json in Resources */,
 				0DBACC9028D8ABB200DAE036 /* redSmoke.json in Resources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

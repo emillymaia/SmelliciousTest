@@ -66,6 +66,24 @@ func DropArea2(completion: @escaping (String) -> Void) -> some View {
     
 }
 
-
+@ViewBuilder
+func DropArea2() -> some View {
+    Image("")
+        .resizable()
+        .frame(width: 100, height: 100)
+        .clipShape(Circle())
+        .overlay(Circle().stroke(Color.init( red: 0.19, green: 0.28, blue: 0.23), lineWidth: 2))
+        .onDrop(of: [.url], isTargeted: .constant(false)) { providers in
+            if let first = providers.first {
+                let _ =  first.loadObject(ofClass: URL.self) { value, error in
+                    guard let url = value else{return}
+                    print(url)
+                }
+            }
+            
+            return false
+        }
+    
+}
 
 
