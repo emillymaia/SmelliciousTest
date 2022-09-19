@@ -27,16 +27,16 @@ struct EssenceModel: Identifiable, Hashable, Equatable {
 
 
 var essences_: [EssenceModel] = [
-    EssenceModel(value: "Hortelã", icon: "Hortela"),
-    EssenceModel(value: "Maracujá", icon: "Maracuja" ),
-    EssenceModel(value: "Rosas", icon: "Rosas"),
-    EssenceModel(value: "Tangerina", icon: "Tangerina"),
-    EssenceModel(value: "Limão", icon: "Limao"),
-    EssenceModel(value: "Canela", icon: "Canela"),
-    EssenceModel(value: "Baunilha", icon: "Baunilha"),
-    EssenceModel(value: "Lavanda", icon: "Lavanda"),
-    EssenceModel(value: "Ylang Ylang", icon: "Ylang"),
-    EssenceModel(value: "Algodão", icon: "Algodao"),
-    EssenceModel(value: "Flor de Cerejeira", icon: "Cerejeira"),
-    EssenceModel(value: "Coco", icon: "Coco")
+    EssenceModel(value: "Hortelã", icon: "Hortela", smokeColor: "Verde"),
+    EssenceModel(value: "Maracujá", icon: "Maracuja", smokeColor: "Amarelo" ),
+    EssenceModel(value: "Rosas", icon: "Rosas", smokeColor: "Vermelho"),
+    EssenceModel(value: "Tangerina", icon: "Tangerina", smokeColor: "Laranja"),
+    EssenceModel(value: "Limão", icon: "Limao", smokeColor: "Verde"),
+    EssenceModel(value: "Canela", icon: "Canela", smokeColor: "Marrom"),
+    EssenceModel(value: "Baunilha", icon: "Baunilha", smokeColor: "Creme"),
+    EssenceModel(value: "Lavanda", icon: "Lavanda", smokeColor: "Roxo"),
+    EssenceModel(value: "Ylang Ylang", icon: "Ylang", smokeColor: "Amarelo"),
+    EssenceModel(value: "Algodão", icon: "Algodao", smokeColor: "Creme"),
+    EssenceModel(value: "Flor de Cerejeira", icon: "Cerejeira", smokeColor: "Rosa"),
+    EssenceModel(value: "Coco", icon: "Coco", smokeColor: "Marrom")
 ]
