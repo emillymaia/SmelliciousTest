@@ -15,7 +15,8 @@ struct CombineEssencesView: View {
     var body: some View {
         NavigationView {
             ZStack{
-                Color.white
+                Color.init( red: 1, green: 0.92, blue: 0.93 )
+                    .edgesIgnoringSafeArea(.all)
                 VStack(spacing: 0) {
                     LottieView(name: "pink-smoke", loopMode: .loop)
                         .frame(width: 250, height: 250)
@@ -26,7 +27,7 @@ struct CombineEssencesView: View {
                     VStack {
                         HStack(spacing: 31) {
                             DropArea()
-                            DropArea()
+                            DropArea2()
                         }
                         Divider()
                             .frame(width:330)
