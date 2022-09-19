@@ -12,13 +12,18 @@ struct CombineEssencesView: View {
     
     @State var essences: [EssenceModel] = essences_
     
+    @State var essence1: EssenceModel? = nil
+    @State var essence2: EssenceModel? = nil
+    
     var body: some View {
         NavigationView {
             ZStack{
                 Color.init( red: 1, green: 0.92, blue: 0.93 )
                     .edgesIgnoringSafeArea(.all)
                 VStack(spacing: 0) {
-                    LottieView(name: "pink-smoke", loopMode: .loop)
+
+                    LottieView(name: "defaultSmoke", loopMode: .loop)
+
                         .frame(width: 250, height: 250)
                         //.opacity(0.50)
                     Difusor()
@@ -26,9 +31,23 @@ struct CombineEssencesView: View {
                         .offset(x: 0, y: -20)
                     VStack {
                         HStack(spacing: 31) {
-                            DropArea()
-                            DropArea2()
-                        }
+
+                            DropArea { id in
+                                let droppedEssence = essences.first { essence in
+                                    return essence.id == id
+                                }
+                                print(droppedEssence!)
+                                essence1 = droppedEssence
+                            }
+                            DropArea2 { id in
+                                let droppedEssence = essences.first { essence in
+                                    return essence.id == id
+                                }
+                                print(droppedEssence!)
+                                
+                                essence1 = droppedEssence
+                            }                        }
+
                         Divider()
                             .frame(width:330)
                             .padding(.top)
