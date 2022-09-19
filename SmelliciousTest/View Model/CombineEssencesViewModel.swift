@@ -27,7 +27,7 @@ func Difusor() -> some View {
 }
 
 @ViewBuilder
-func DropArea() -> some View {
+func DropArea(completion: @escaping (String) -> Void) -> some View {
     Image("")
         .resizable()
         .frame(width: 100, height: 100)
@@ -37,7 +37,7 @@ func DropArea() -> some View {
             if let first = providers.first {
                 let _ =  first.loadObject(ofClass: URL.self) { value, error in
                     guard let url = value else{return}
-                    print(url)
+                    completion(url.absoluteString)
                 }
             }
             
@@ -47,7 +47,7 @@ func DropArea() -> some View {
 }
 
 @ViewBuilder
-func DropArea2() -> some View {
+func DropArea2(completion: @escaping (String) -> Void) -> some View {
     Image("")
         .resizable()
         .frame(width: 100, height: 100)
@@ -57,7 +57,7 @@ func DropArea2() -> some View {
             if let first = providers.first {
                 let _ =  first.loadObject(ofClass: URL.self) { value, error in
                     guard let url = value else{return}
-                    print(url)
+                    completion(url.absoluteString)
                 }
             }
             

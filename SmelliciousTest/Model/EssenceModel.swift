@@ -22,6 +22,7 @@ struct EssenceModel: Identifiable, Hashable, Equatable {
     var image: Image {
         Image(icon)
     }
+    
 }
 
 
