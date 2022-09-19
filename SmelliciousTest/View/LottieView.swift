@@ -4,7 +4,7 @@ import SwiftUI
 import UIKit
 
 struct LottieView: UIViewRepresentable{
-    var name = "pink-smoke"
+    var name = "default-smoke"
     var loopMode: LottieLoopMode = .loop
     
     func makeUIView(context: UIViewRepresentableContext<LottieView>) -> UIView {
