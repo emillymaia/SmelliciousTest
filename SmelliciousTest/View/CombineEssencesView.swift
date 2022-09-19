@@ -17,9 +17,12 @@ struct CombineEssencesView: View {
             ZStack{
                 Color.init( red: 1, green: 0.92, blue: 0.93 )
                     .edgesIgnoringSafeArea(.all)
-                VStack{
+                VStack(spacing: 0) {
+                    LottieView(name: "pink-smoke", loopMode: .loop)
+                        .frame(width: 250, height: 250)
                     Difusor()
                         .frame(width: 100, height: 180)
+                        .offset(x: 0, y: -20)
                     VStack {
                         HStack(spacing: 31) {
                             DropArea()
@@ -38,7 +41,8 @@ struct CombineEssencesView: View {
                 .toolbar {
                     ResetButton()
                 }
-            }
+                
+            }.ignoresSafeArea()
         }
     }
     

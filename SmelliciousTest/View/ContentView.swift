@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct ContentView: View {
     var body: some View {
         ScrollView(.vertical, showsIndicators:  false) {
+            //LottieView(name: "pink-smoke", loopMode: .loop)
+                //.frame(width: 250, height: 250)
             CombineEssencesView()
         }
+        //.ignoresSafeArea()
     }
 }
 
