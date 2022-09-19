@@ -15,12 +15,11 @@ struct CombineEssencesView: View {
     var body: some View {
         NavigationView {
             ZStack{
-                Color.init( red: 1, green: 0.92, blue: 0.93 )
-                    .edgesIgnoringSafeArea(.all)
+                Color.white
                 VStack(spacing: 0) {
-                    LottieView(name: "default-smoke", loopMode: .loop)
+                    LottieView(name: "pink-smoke", loopMode: .loop)
                         .frame(width: 250, height: 250)
-                        .opacity(0.50)
+                        //.opacity(0.50)
                     Difusor()
                         .frame(width: 100, height: 180)
                         .offset(x: 0, y: -20)
