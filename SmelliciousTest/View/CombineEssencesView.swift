@@ -1,7 +1,5 @@
-//
 //  CombineEssencesView.swift
 //  SmelliciousTest
-//
 //  Created by Emilly Maia on 15/09/22.
 //
 
@@ -14,6 +12,7 @@ struct CombineEssencesView: View {
     
     @State var essence1: EssenceModel? = nil
     @State var essence2: EssenceModel? = nil
+    @State var isShowingPopover = false
     
     var body: some View {
         NavigationView {
@@ -21,33 +20,34 @@ struct CombineEssencesView: View {
                 Color.init( red: 1, green: 0.92, blue: 0.93 )
                     .edgesIgnoringSafeArea(.all)
                 VStack(spacing: 0) {
-
                     LottieView(name: "defaultSmoke", loopMode: .loop)
-
                         .frame(width: 250, height: 250)
-                        //.opacity(0.50)
                     Difusor()
                         .frame(width: 100, height: 180)
                         .offset(x: 0, y: -20)
                     VStack {
                         HStack(spacing: 31) {
-
-                            DropArea { id in
+                            
+                            DropArea(essence: essence1){ id in
                                 let droppedEssence = essences.first { essence in
                                     return essence.id == id
                                 }
-                                print(droppedEssence!)
-                                essence1 = droppedEssence
-                            }
-                            DropArea2 { id in
-                                let droppedEssence = essences.first { essence in
-                                    return essence.id == id
-                                }
-                                print(droppedEssence!)
                                 
                                 essence1 = droppedEssence
-                            }                        }
-
+                                
+                                checkMisture()
+    }
+                            
+                            DropArea2(essence: essence2) { id in
+                                let droppedEssence = essences.first { essence in
+                                    return essence.id == id
+                                }
+                                
+                                essence2 = droppedEssence
+                                checkMisture()
+                            }
+                        }
+                        
                         Divider()
                             .frame(width:330)
                             .padding(.top)
@@ -56,16 +56,54 @@ struct CombineEssencesView: View {
                             .frame(width: 132, height: 34, alignment: .bottom)
                         DragArea()
                     }
-
+                    
                 }.ignoresSafeArea()
-                .toolbar {
-                    ResetButton()
-                }
-                
+                    .toolbar {
+                        ResetButton()
+                    }
+            }
+        }
+        .overlay {
+            if isShowingPopover {
+                VisualEffectView(effect: UIBlurEffect(style: .light))
+                RoundedRectangle(cornerRadius: 15)
+                    .fill(Color(red: 0.89, green: 0.95, blue: 0.91))
+                    .frame(width: 400, height: 200)
+                    .overlay {
+                        Text("YAAAAY!")
+                            .foregroundColor(Color(red: 0.20, green: 0.29, blue: 0.24))
+                            .font(Font.title.weight(.bold))
+                            .font(.system(size: 25))
+                            .offset(x: 5, y: -65)
+                        Text("Sua combinação é um sucesso! Relaxe e aproveite seu novo aroma! Que tal ler um livro para deixar esse momento perfeito?")
+                            .foregroundColor(Color(red: 0.20, green: 0.29, blue: 0.24))
+                            .font(.system(size: 16))
+                            .frame(width: 250, height: 100)
+                            .offset(x: 65, y: -10)
+                        Image("Baunilha")
+                            .frame(width: 100 , height: 100, alignment: .center)
+                            .clipShape(Circle())
+                            .shadow(radius: 10)
+                            .offset(x: -120.0, y: -25)
+                        Button(action: {
+                            withAnimation {
+                                isShowingPopover = false
+                            }
+                        }) {
+                            Text("Dimiss")
+                                .frame(width: 400 , height: 50, alignment: .center)
+                                .background(Color(.white))
+                                .foregroundColor(.black)
+                                .clipShape(Rectangle())
+                        }
+                        .offset(x: 0.0, y: 75.0)
+                    }
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                    .transition(.scale)
             }
         }
     }
-    
+
     @ViewBuilder
     func DragArea() -> some View {
         TabView {
@@ -75,13 +113,8 @@ struct CombineEssencesView: View {
                 HStack(spacing: 30) {
                     ForEach(essences, id: \.self) { row in
                         VStack{
-                            Image(row.icon)
-                                .resizable()
-                                .cornerRadius(900)
-                                .frame(width: 90,
-                                       height: 90, alignment: .leading)
-                                .overlay(Circle().stroke(Color.init( red: 0.19, green: 0.28, blue: 0.23), lineWidth: 2))
-
+                            ImageElementComponent(image: row.icon)
+                            
                             
                             Text(row.value)
                         }
@@ -109,7 +142,24 @@ struct CombineEssencesView: View {
             UIPageControl.appearance().pageIndicatorTintColor = UIColor.black.withAlphaComponent(0.2)
         }
     }
+    
+    func checkMisture() {
+        guard let essence1 = essence1 else {
+            return
+        }
+        guard let essence2 = essence2 else {
+            return
+        }
+        
+        if essence2.niceMistures.contains(essence1.value) {
+            isShowingPopover = true
+        } else {
+            print("deu errado")
+        }
+    }
 }
+
+
 
 struct CombineEssencesView_Previews: PreviewProvider {
     static var previews: some View {
