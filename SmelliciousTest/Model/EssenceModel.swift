@@ -30,7 +30,7 @@ struct EssenceModel: Identifiable, Hashable, Equatable {
 
 var essences_: [EssenceModel] = [
     EssenceModel(value: "Hortelã", icon: "Hortela", smokeColor: "Verde", niceMistures: ["Maracujá", "Rosas"]),
-    EssenceModel(value: "Maracujá", icon: "Maracuja", smokeColor: "Amarelo", niceMistures: ["Maracujá", "Rosas"]),
+    EssenceModel(value: "Maracujá", icon: "Maracuja", smokeColor: "yellowSmoke", niceMistures: ["Maracujá", "Rosas"]),
     EssenceModel(value: "Rosas", icon: "Rosas", smokeColor: "Vermelho", niceMistures: ["Maracujá", "Rosas"]),
     EssenceModel(value: "Tangerina", icon: "Tangerina", smokeColor:"Laranja", niceMistures: ["Rosas", "Maracujá"]),
     EssenceModel(value: "Limão", icon: "Limao", smokeColor:"Verde", niceMistures: ["Maracujá", "Rosas"]),

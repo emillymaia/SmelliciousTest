@@ -5,6 +5,7 @@
 
 import SwiftUI
 import Algorithms
+import Lottie
 
 struct CombineEssencesView: View {
     
@@ -13,6 +14,8 @@ struct CombineEssencesView: View {
     @State var essence1: EssenceModel? = nil
     @State var essence2: EssenceModel? = nil
     @State var isShowingPopover = false
+    @State var smokeName = "defaultSmoke"
+    
     
     var body: some View {
         NavigationView {
@@ -20,8 +23,8 @@ struct CombineEssencesView: View {
                 Color.init( red: 1, green: 0.92, blue: 0.93 )
                     .edgesIgnoringSafeArea(.all)
                 VStack(spacing: 0) {
-                    LottieView(name: "defaultSmoke", loopMode: .loop)
-                        .frame(width: 250, height: 250)
+                    LottieView(name: smokeName, loopMode: .loop)
+                     .frame(width: 250, height: 250)
                     Difusor()
                         .frame(width: 100, height: 180)
                         .offset(x: 0, y: -20)
@@ -30,12 +33,14 @@ struct CombineEssencesView: View {
                             
                             DropArea(essence: essence1){ id in
                                 let droppedEssence = essences.first { essence in
+                                    
                                     return essence.id == id
                                 }
                                 
                                 essence1 = droppedEssence
-                                
                                 checkMisture()
+                                smokeName = (essence1?.smokeColor)!
+
     }
                             
                             DropArea2(essence: essence2) { id in
@@ -45,6 +50,8 @@ struct CombineEssencesView: View {
                                 
                                 essence2 = droppedEssence
                                 checkMisture()
+                                smokeName = (essence2?.smokeColor)!
+
                             }
                         }
                         
@@ -152,7 +159,8 @@ struct CombineEssencesView: View {
         }
         
         if essence2.niceMistures.contains(essence1.value) {
-            isShowingPopover = true
+          
+           isShowingPopover = true
         } else {
             print("deu errado")
         }
