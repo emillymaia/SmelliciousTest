@@ -9,17 +9,6 @@ import SwiftUI
 import Algorithms
 
 
-func ResetButton() -> some View {
-    Button {
-        
-    }label: {
-        Image(systemName: "arrow.clockwise")
-            .resizable()
-    }
-    .foregroundColor(Color.init( red: 0.19, green: 0.28, blue: 0.23))
-    
-}
-
 func Difusor() -> some View {
     Image("Difusor")
         .resizable()
