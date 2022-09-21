@@ -26,21 +26,43 @@ struct EssenceModel: Identifiable, Hashable, Equatable {
 }
 
 
-
-
 var essences_: [EssenceModel] = [
-    EssenceModel(value: "Hortelã", icon: "Hortela", smokeColor: "greenSmoke", niceMistures: ["Maracujá", "Rosas"]),
-    EssenceModel(value: "Maracujá", icon: "Maracuja", smokeColor: "yellowSmoke", niceMistures: ["Maracujá", "Rosas"]),
-    EssenceModel(value: "Rosas", icon: "Rosas", smokeColor: "redSmoke", niceMistures: ["Maracujá", "Rosas"]),
-    EssenceModel(value: "Tangerina", icon: "Tangerina", smokeColor:"orangeSmoke", niceMistures: ["Rosas", "Maracujá"]),
-    EssenceModel(value: "Limão", icon: "Limao", smokeColor:"greenSmoke", niceMistures: ["Maracujá", "Rosas"]),
-    EssenceModel(value: "Canela", icon: "Canela", smokeColor:"brownSmoke", niceMistures: ["Maracujá", "Rosas"]),
-    EssenceModel(value: "Baunilha", icon: "Baunilha", smokeColor:"vanillaSmoke", niceMistures: ["Maracujá", "Rosas"]),
-    EssenceModel(value: "Lavanda", icon: "Lavanda", smokeColor: "purpleSmoke", niceMistures: ["Maracujá", "Rosas"]),
-    EssenceModel(value: "Ylang Ylang", icon: "Ylang", smokeColor:"yellowSmoke", niceMistures: ["Maracujá", "Rosas"]),
-    EssenceModel(value: "Algodão", icon: "Algodao", smokeColor:"vanillaSmoke", niceMistures: ["Maracujá", "Rosas"]),
-    EssenceModel(value: "Flor de Cerejeira", icon: "Cerejeira", smokeColor: "pinkSmoke", niceMistures: ["Maracujá", "Ylang Ylang"]),
-    EssenceModel(value: "Coco", icon: "Coco", smokeColor:"brownSmoke", niceMistures: ["Maracujá", "Coco"])
+    EssenceModel(value: "Hortelã", icon: "Hortela",
+                 smokeColor: "greenSmoke", niceMistures: ["Limão", "Lavanda", "Baunilha", "Ylang Ylang"]
+                ),
+    EssenceModel(value: "Maracujá", icon: "Maracuja",
+                 smokeColor: "yellowSmoke", niceMistures: ["Tangerina", "Baunilha",]
+                ),
+    EssenceModel(value: "Rosas", icon: "Rosas",
+                 smokeColor: "redSmoke", niceMistures: ["Limão", "Ylang Ylang", "Lavanda", "Baunilha", "Coco"]
+                ),
+    EssenceModel(value: "Tangerina", icon: "Tangerina",
+                 smokeColor:"orangeSmoke", niceMistures: ["Maracujá", "Limão", "Canela", "Baunilha"]
+                ),
+    EssenceModel(value: "Limão", icon: "Limao",
+                 smokeColor:"greenSmoke", niceMistures: ["Hortelã", "Rosas", "Tangerina", "Baunilha", "Ylang Ylang", "Flor de Cerejeira", "Coco"]
+                ),
+    EssenceModel(value: "Canela", icon: "Canela",
+                 smokeColor:"brownSmoke", niceMistures: ["Maracujá", "Rosas", "Tangerina", "Baunilha", "Ylang Ylang"]
+                ),
+    EssenceModel(value: "Baunilha", icon: "Baunilha",
+                 smokeColor:"vanillaSmoke", niceMistures: ["Hortelã", "Maracujá", "Rosas", "Tangerina", "Limão", "Canela", "Lavanda", "Ylang Ylang", "Coco"]
+                ),
+    EssenceModel(value: "Lavanda", icon: "Lavanda",
+                 smokeColor: "purpleSmoke", niceMistures: ["Hortelã", "Rosas", "Baunilha", "Algodão"]
+                ),
+    EssenceModel(value: "Ylang Ylang", icon: "Ylang",
+                 smokeColor:"yellowSmoke", niceMistures: ["Hortelã", "Rosas", "Limão", "Canela", "Baunilha"]
+                ),
+    EssenceModel(value: "Algodão", icon: "Algodao",
+                 smokeColor:"vanillaSmoke", niceMistures: ["Maracujá", "Rosas", "Lavanda"]
+                ),
+    EssenceModel(value: "Flor de Cerejeira", icon: "Cerejeira",
+                 smokeColor: "pinkSmoke", niceMistures: ["Limão"]
+                ),
+    EssenceModel(value: "Coco", icon: "Coco",
+                 smokeColor:"brownSmoke", niceMistures: ["Rosas", "Limão", "Baunilha"]
+                )
 
 ]
 
