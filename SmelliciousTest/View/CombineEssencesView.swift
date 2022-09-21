@@ -10,7 +10,6 @@ import Lottie
 struct CombineEssencesView: View {
     
     @State var essences: [EssenceModel] = essences_
-    
     @State var essence1: EssenceModel? = nil
     @State var essence2: EssenceModel? = nil
     @State var popoverPositive = false
@@ -95,7 +94,9 @@ struct CombineEssencesView: View {
                 HStack(spacing: 30) {
                     ForEach(essences, id: \.self) { row in
                         VStack{
+                            let isSelected = row == essence1 || row == essence2
                             ImageElementComponent(image: row.icon)
+                                .opacity(isSelected ? 0.5 : 1.0)
                             
                             
                             Text(row.value)
@@ -103,7 +104,11 @@ struct CombineEssencesView: View {
                         // MARK: - Adding Drag Operation
                         .onDrag {
                             //Returning ID to find wich Item is Moving
-                            return .init(contentsOf: URL(string:row.id))!
+                            if row.id == essence1?.id || row.id == essence2?.id {
+                                return NSItemProvider()
+                            } else {
+                                return .init(contentsOf: URL(string:row.id))!
+                            }
                         } preview: {
                             Image(row.icon)
                                 .resizable()
@@ -111,6 +116,7 @@ struct CombineEssencesView: View {
                                 .frame(width: SizesComponents.widthScreen*0.20,
                                        height: SizesComponents.widthScreen*0.20, alignment: .leading)
                                 .contentShape(.dragPreview, Circle())
+//                                .disabled(true)
                         }
                     }
                 }
