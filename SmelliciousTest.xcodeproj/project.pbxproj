@@ -18,6 +18,9 @@
 		0DBACC9528D8ABB300DAE036 /* yellowSmoke.json in Resources */ = {isa = PBXBuildFile; fileRef = 0DBACC8C28D8ABB200DAE036 /* yellowSmoke.json */; };
 		0DBACC9628D8ABB300DAE036 /* brownSmoke.json in Resources */ = {isa = PBXBuildFile; fileRef = 0DBACC8D28D8ABB200DAE036 /* brownSmoke.json */; };
 		0DBACC9728D8ABB300DAE036 /* purpleSmoke.json in Resources */ = {isa = PBXBuildFile; fileRef = 0DBACC8E28D8ABB200DAE036 /* purpleSmoke.json */; };
+		0DE5B5F128D9FD5800670B59 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE5B5F028D9FD5800670B59 /* OnboardingView.swift */; };
+		0DE5B5F328DB354000670B59 /* GifModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE5B5F228DB354000670B59 /* GifModel.swift */; };
+		0DE5B5F828DB413000670B59 /* dragAndDrop.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0DE5B5F728DB413000670B59 /* dragAndDrop.gif */; };
 		AB6FE7CC28D49CF7008A683E /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6FE7CB28D49CF7008A683E /* SwiftUIView.swift */; };
 		AB6FE7D128D4B798008A683E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = AB6FE7D028D4B798008A683E /* Lottie */; };
 		AB6FE7D928D8BB12008A683E /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = AB6FE7D828D8BB12008A683E /* Algorithms */; };
@@ -61,6 +64,9 @@
 		0DBACC8C28D8ABB200DAE036 /* yellowSmoke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = yellowSmoke.json; sourceTree = "<group>"; };
 		0DBACC8D28D8ABB200DAE036 /* brownSmoke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = brownSmoke.json; sourceTree = "<group>"; };
 		0DBACC8E28D8ABB200DAE036 /* purpleSmoke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = purpleSmoke.json; sourceTree = "<group>"; };
+		0DE5B5F028D9FD5800670B59 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		0DE5B5F228DB354000670B59 /* GifModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifModel.swift; sourceTree = "<group>"; };
+		0DE5B5F728DB413000670B59 /* dragAndDrop.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = dragAndDrop.gif; sourceTree = "<group>"; };
 		AB6FE7CB28D49CF7008A683E /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		ABBBC5AB28D351E700AF7895 /* SmelliciousTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmelliciousTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABBBC5AE28D351E700AF7895 /* SmelliciousTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmelliciousTestApp.swift; sourceTree = "<group>"; };
@@ -204,6 +210,7 @@
 				ABBBC5DF28D3536500AF7895 /* CombineEssencesView.swift */,
 				AB6FE7CB28D49CF7008A683E /* SwiftUIView.swift */,
 				0DBACC7328D8882900DAE036 /* LottieView.swift */,
+				0DE5B5F028D9FD5800670B59 /* OnboardingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -212,6 +219,8 @@
 			isa = PBXGroup;
 			children = (
 				ABBBC5E228D3543900AF7895 /* CombineEssencesViewModel.swift */,
+				0DE5B5F728DB413000670B59 /* dragAndDrop.gif */,
+				0DE5B5F228DB354000670B59 /* GifModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -333,6 +342,7 @@
 				0DBACC9228D8ABB200DAE036 /* orangeSmoke.json in Resources */,
 				0DBACC8F28D8ABB200DAE036 /* greenSmoke.json in Resources */,
 				ABBBC5B328D351E800AF7895 /* Assets.xcassets in Resources */,
+				0DE5B5F828DB413000670B59 /* dragAndDrop.gif in Resources */,
 				0DBACC9728D8ABB300DAE036 /* purpleSmoke.json in Resources */,
 				0DBACC9328D8ABB300DAE036 /* pinkSmoke.json in Resources */,
 				0DBACC9428D8ABB300DAE036 /* defaultSmoke.json in Resources */,
@@ -366,6 +376,8 @@
 				ABBBC5DD28D3529800AF7895 /* SizeComponents.swift in Sources */,
 				AB6FE7CC28D49CF7008A683E /* SwiftUIView.swift in Sources */,
 				0DBACC7428D8882900DAE036 /* LottieView.swift in Sources */,
+				0DE5B5F128D9FD5800670B59 /* OnboardingView.swift in Sources */,
+				0DE5B5F328DB354000670B59 /* GifModel.swift in Sources */,
 				ABBBC5E328D3543900AF7895 /* CombineEssencesViewModel.swift in Sources */,
 				ABBBC5E028D3536500AF7895 /* CombineEssencesView.swift in Sources */,
 				0DBACC7728D889ED00DAE036 /* SmelliciousTestApp.swift in Sources */,
@@ -529,6 +541,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SmelliciousTest/Preview Content\"";
+				DEVELOPMENT_TEAM = 239MK3D5Y2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -557,6 +570,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SmelliciousTest/Preview Content\"";
+				DEVELOPMENT_TEAM = 239MK3D5Y2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
