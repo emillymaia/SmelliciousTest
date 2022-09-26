@@ -15,6 +15,7 @@ struct CombineEssencesView: View {
     @State var popoverPositive = false
     @State var popoverNegative = false
     @State var smokeName = "defaultSmoke"
+    @State var isPopover = false
     
     func ResetButton() -> some View {
         Button {
@@ -95,7 +96,7 @@ struct CombineEssencesView: View {
                     ForEach(essences, id: \.self) { row in
                         VStack{
                             let isSelected = row == essence1 || row == essence2
-                            ImageElementComponent(image: row.icon)
+                            ImageElementComponent(essence: row)
                                 .opacity(isSelected ? 0.5 : 1.0)
                             
                             
