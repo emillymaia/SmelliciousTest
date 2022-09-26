@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D3704BB28E1DFAE004CB713 /* defaultSmoke.json in Resources */ = {isa = PBXBuildFile; fileRef = 0D3704BA28E1DFAE004CB713 /* defaultSmoke.json */; };
+		0D3704BD28E1DFB4004CB713 /* brownSmoke.json in Resources */ = {isa = PBXBuildFile; fileRef = 0D3704BC28E1DFB4004CB713 /* brownSmoke.json */; };
+		0D3704BF28E1DFBA004CB713 /* greenSmoke.json in Resources */ = {isa = PBXBuildFile; fileRef = 0D3704BE28E1DFBA004CB713 /* greenSmoke.json */; };
 		0DBACC7428D8882900DAE036 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBACC7328D8882900DAE036 /* LottieView.swift */; };
 		0DBACC7728D889ED00DAE036 /* SmelliciousTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBBC5AE28D351E700AF7895 /* SmelliciousTestApp.swift */; };
-		0DBACC8F28D8ABB200DAE036 /* greenSmoke.json in Resources */ = {isa = PBXBuildFile; fileRef = 0DBACC8628D8ABB200DAE036 /* greenSmoke.json */; };
 		0DBACC9028D8ABB200DAE036 /* redSmoke.json in Resources */ = {isa = PBXBuildFile; fileRef = 0DBACC8728D8ABB200DAE036 /* redSmoke.json */; };
 		0DBACC9128D8ABB200DAE036 /* vanillaSmoke.json in Resources */ = {isa = PBXBuildFile; fileRef = 0DBACC8828D8ABB200DAE036 /* vanillaSmoke.json */; };
 		0DBACC9228D8ABB200DAE036 /* orangeSmoke.json in Resources */ = {isa = PBXBuildFile; fileRef = 0DBACC8928D8ABB200DAE036 /* orangeSmoke.json */; };
 		0DBACC9328D8ABB300DAE036 /* pinkSmoke.json in Resources */ = {isa = PBXBuildFile; fileRef = 0DBACC8A28D8ABB200DAE036 /* pinkSmoke.json */; };
-		0DBACC9428D8ABB300DAE036 /* defaultSmoke.json in Resources */ = {isa = PBXBuildFile; fileRef = 0DBACC8B28D8ABB200DAE036 /* defaultSmoke.json */; };
 		0DBACC9528D8ABB300DAE036 /* yellowSmoke.json in Resources */ = {isa = PBXBuildFile; fileRef = 0DBACC8C28D8ABB200DAE036 /* yellowSmoke.json */; };
-		0DBACC9628D8ABB300DAE036 /* brownSmoke.json in Resources */ = {isa = PBXBuildFile; fileRef = 0DBACC8D28D8ABB200DAE036 /* brownSmoke.json */; };
 		0DBACC9728D8ABB300DAE036 /* purpleSmoke.json in Resources */ = {isa = PBXBuildFile; fileRef = 0DBACC8E28D8ABB200DAE036 /* purpleSmoke.json */; };
 		0DE5B5F128D9FD5800670B59 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE5B5F028D9FD5800670B59 /* OnboardingView.swift */; };
 		0DE5B5F328DB354000670B59 /* GifModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE5B5F228DB354000670B59 /* GifModel.swift */; };
@@ -55,15 +55,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D3704BA28E1DFAE004CB713 /* defaultSmoke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = defaultSmoke.json; sourceTree = "<group>"; };
+		0D3704BC28E1DFB4004CB713 /* brownSmoke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = brownSmoke.json; sourceTree = "<group>"; };
+		0D3704BE28E1DFBA004CB713 /* greenSmoke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = greenSmoke.json; sourceTree = "<group>"; };
 		0DBACC7328D8882900DAE036 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
-		0DBACC8628D8ABB200DAE036 /* greenSmoke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = greenSmoke.json; sourceTree = "<group>"; };
 		0DBACC8728D8ABB200DAE036 /* redSmoke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = redSmoke.json; sourceTree = "<group>"; };
 		0DBACC8828D8ABB200DAE036 /* vanillaSmoke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vanillaSmoke.json; sourceTree = "<group>"; };
 		0DBACC8928D8ABB200DAE036 /* orangeSmoke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = orangeSmoke.json; sourceTree = "<group>"; };
 		0DBACC8A28D8ABB200DAE036 /* pinkSmoke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pinkSmoke.json; sourceTree = "<group>"; };
-		0DBACC8B28D8ABB200DAE036 /* defaultSmoke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = defaultSmoke.json; sourceTree = "<group>"; };
 		0DBACC8C28D8ABB200DAE036 /* yellowSmoke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = yellowSmoke.json; sourceTree = "<group>"; };
-		0DBACC8D28D8ABB200DAE036 /* brownSmoke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = brownSmoke.json; sourceTree = "<group>"; };
 		0DBACC8E28D8ABB200DAE036 /* purpleSmoke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = purpleSmoke.json; sourceTree = "<group>"; };
 		0DE5B5F028D9FD5800670B59 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		0DE5B5F228DB354000670B59 /* GifModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifModel.swift; sourceTree = "<group>"; };
@@ -116,12 +116,12 @@
 		0DBACC8128D8A74F00DAE036 /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
-				0DBACC8D28D8ABB200DAE036 /* brownSmoke.json */,
-				0DBACC8B28D8ABB200DAE036 /* defaultSmoke.json */,
-				0DBACC8628D8ABB200DAE036 /* greenSmoke.json */,
 				0DBACC8928D8ABB200DAE036 /* orangeSmoke.json */,
 				0DBACC8A28D8ABB200DAE036 /* pinkSmoke.json */,
+				0D3704BC28E1DFB4004CB713 /* brownSmoke.json */,
 				0DBACC8E28D8ABB200DAE036 /* purpleSmoke.json */,
+				0D3704BE28E1DFBA004CB713 /* greenSmoke.json */,
+				0D3704BA28E1DFAE004CB713 /* defaultSmoke.json */,
 				0DBACC8728D8ABB200DAE036 /* redSmoke.json */,
 				0DBACC8828D8ABB200DAE036 /* vanillaSmoke.json */,
 				0DBACC8C28D8ABB200DAE036 /* yellowSmoke.json */,
@@ -340,15 +340,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DBACC9628D8ABB300DAE036 /* brownSmoke.json in Resources */,
 				ABBBC5B628D351E800AF7895 /* Preview Assets.xcassets in Resources */,
 				0DBACC9228D8ABB200DAE036 /* orangeSmoke.json in Resources */,
-				0DBACC8F28D8ABB200DAE036 /* greenSmoke.json in Resources */,
 				ABBBC5B328D351E800AF7895 /* Assets.xcassets in Resources */,
+				0D3704BB28E1DFAE004CB713 /* defaultSmoke.json in Resources */,
 				0DE5B5F828DB413000670B59 /* dragAndDrop.gif in Resources */,
 				0DBACC9728D8ABB300DAE036 /* purpleSmoke.json in Resources */,
 				0DBACC9328D8ABB300DAE036 /* pinkSmoke.json in Resources */,
-				0DBACC9428D8ABB300DAE036 /* defaultSmoke.json in Resources */,
+				0D3704BF28E1DFBA004CB713 /* greenSmoke.json in Resources */,
+				0D3704BD28E1DFB4004CB713 /* brownSmoke.json in Resources */,
 				0DBACC9128D8ABB200DAE036 /* vanillaSmoke.json in Resources */,
 				0DBACC9528D8ABB300DAE036 /* yellowSmoke.json in Resources */,
 				0DBACC9028D8ABB200DAE036 /* redSmoke.json in Resources */,
