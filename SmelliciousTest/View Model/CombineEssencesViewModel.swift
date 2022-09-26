@@ -16,6 +16,13 @@ func Difusor() -> some View {
         .frame(width: 224, height: 146, alignment: .center)
 }
 
+func Mancha() -> some View {
+    Image("mancha")
+        .resizable()
+        .aspectRatio(contentMode: .fit)
+        .frame(width: 284, height: 213, alignment: .center)
+}
+
 @ViewBuilder
 func DropArea(essence: EssenceModel? = nil, completion: @escaping (String) -> Void) -> some View {
     Image(essence?.icon ?? "")

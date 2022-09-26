@@ -26,7 +26,7 @@ struct CombineEssencesView: View {
             Image(systemName: "arrow.clockwise")
                 .resizable()
         }
-        .foregroundColor(Color.init( red: 0.19, green: 0.28, blue: 0.23))
+        .foregroundColor(Color.init( red: 235/255, green: 252/255, blue: 225/255))
     }
     
     
@@ -34,14 +34,23 @@ struct CombineEssencesView: View {
     var body: some View {
         NavigationView {
             ZStack{
-                Color.init( red: 1, green: 0.92, blue: 0.93 )
+                Color.init(red: 235/255, green: 252/255, blue: 225/255)
                     .edgesIgnoringSafeArea(.all)
-                VStack(spacing: 0) {
-                    LottieView(name: smokeName, loopMode: .loop)
-                        .frame(width: 250, height: 250)
-                    Difusor()
-                        .frame(width: 100, height: 180)
-                        .offset(x: 0, y: -20)
+                VStack{
+                    ZStack{
+                        Mancha()
+                            .frame(width: 100, height: 180)
+                            .offset(x: 0, y: -60)
+                        VStack{
+                            LottieView(name: smokeName, loopMode: .loop)
+                                .frame(width: 250, height: 250)
+                                .offset(x: 0, y: -200)
+                        }
+                        Difusor()
+                            .frame(width: 100, height: 180)
+                            .offset(x: 0, y: -20)
+                    }
+                    .offset(x: 0, y: 60)
                     VStack {
                         HStack(spacing: 31) {
                             
