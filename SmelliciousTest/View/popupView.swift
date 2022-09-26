@@ -17,17 +17,17 @@ struct popupView: View {
     var body: some View {
         
         if popupNegative {
-            VisualEffectView(effect: UIBlurEffect(style: .light))
+            VisualEffectView(effect: UIBlurEffect(style: .extraLight))
                 .edgesIgnoringSafeArea(.all)
-                .opacity(1)
+                .opacity(0.7)
                 .overlay { popNegative }
                 .transition(.scale)
         }
 
         if popupPositive {
-            VisualEffectView(effect: UIBlurEffect(style: .light))
+            VisualEffectView(effect: UIBlurEffect(style: .extraLight))
                 .edgesIgnoringSafeArea(.all)
-                .opacity(1)
+                .opacity(0.7)
                 .overlay { popPositive }
                 .transition(.scale)
         }
@@ -72,11 +72,10 @@ struct popupView: View {
                 Rectangle()
                     .fill(Color(red: 0.68, green: 0.55, blue: 0.53))
                     .foregroundColor(.white)
-                
             }
-            .clipShape(RoundedRectangle(cornerRadius: 10))
+            .clipShape(RoundedRectangle(cornerRadius: 15))
             .padding(.horizontal, 30)
-            
+            .shadow(color: .gray, radius: 2, x: 0, y: 2)
         }
         var popPositive: some View {
             VStack{
@@ -120,9 +119,9 @@ struct popupView: View {
                     .fill(Color(red: 0.40, green: 0.55, blue: 0.46))
                     .foregroundColor(.white)
             }
-            .clipShape(RoundedRectangle(cornerRadius: 10))
+            .clipShape(RoundedRectangle(cornerRadius: 15))
             .padding(.horizontal, 30)
-            
+            .shadow(color: .gray, radius: 2, x: 0, y: 2)
         }
         
         func resetEssence() {
