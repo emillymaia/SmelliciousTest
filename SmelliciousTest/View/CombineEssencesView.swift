@@ -12,8 +12,8 @@ struct CombineEssencesView: View {
     @State var essences: [EssenceModel] = essences_
     @State var essence1: EssenceModel? = nil
     @State var essence2: EssenceModel? = nil
-    @State var popoverPositive = false
-    @State var popoverNegative = false
+    @State var popupPositive = false
+    @State var popupNegative = false
     @State var smokeName = "defaultSmoke"
     @State var isPopover = false
     
@@ -89,7 +89,7 @@ struct CombineEssencesView: View {
             }
         }
         .overlay {
-            SwiftUIView(popoverPositive: $popoverPositive, popoverNegative: $popoverNegative, smokeName: $smokeName, essence1: $essence1, essence2: $essence2)
+            popupView(popupPositive: $popupPositive, popupNegative: $popupNegative, smokeName: $smokeName, essence1: $essence1, essence2: $essence2)
             
        }
     }
@@ -152,18 +152,14 @@ struct CombineEssencesView: View {
         
         if essence2.niceMistures.contains(essence1.value) {
             withAnimation {
-                popoverPositive = true
+                popupPositive = true
             }
             
         } else {
             withAnimation {
-                popoverNegative = true
+                popupNegative = true
             }
         }
-        
-        
-        
-        
         
     }
 }
