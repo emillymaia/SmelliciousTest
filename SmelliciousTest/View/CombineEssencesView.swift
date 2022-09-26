@@ -76,8 +76,8 @@ struct CombineEssencesView: View {
                         Divider()
                             .frame(width:330)
                             .padding(.top)
-                        Text("Elementos")
-                            .font(.system(.title))
+                        Text("Elements")
+                            .font(.system(.title, design: .rounded))
                             .frame(width: 132, height: 34, alignment: .bottom)
                         DragArea()
                     }

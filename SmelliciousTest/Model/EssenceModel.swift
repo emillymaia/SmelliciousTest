@@ -28,52 +28,52 @@ struct EssenceModel: Identifiable, Hashable, Equatable {
 
 
 var essences_: [EssenceModel] = [
-    EssenceModel(value: "Hortelã", icon: "Hortela",
-                 smokeColor: "greenSmoke", textDescription: "Ajuda na concentração e motiva a alta performance nas atividades, além de deixar a respiração mais agradável.",
-                 niceMistures: ["Limão", "Lavanda", "Baunilha", "Ylang Ylang"]
+    EssenceModel(value: "Mint", icon: "Hortela",
+                 smokeColor: "greenSmoke", textDescription: "It helps with concentration and motivates high performance in activities, as well as making breathing more pleasant due to the menthol aroma.",
+                 niceMistures: ["Lemon", "Lavender", "Vanilla", "Ylang Ylang"]
                 ),
-    EssenceModel(value: "Maracujá", icon: "Maracuja",
-                 smokeColor: "yellowSmoke", textDescription: "Com propriedades relaxantes, diminui o estresse e a ansiedade e proporciona um sono tranquilo.",
-                 niceMistures: ["Tangerina", "Baunilha",]
+    EssenceModel(value: "Passion Fruit", icon: "Maracuja",
+                 smokeColor: "yellowSmoke", textDescription: "With relaxing properties, it reduces stress and anxiety and provides a peaceful sleep.",
+                 niceMistures: ["Tangerine", "Vanilla"]
                 ),
-    EssenceModel(value: "Rosas", icon: "Rosas",
-                 smokeColor: "redSmoke", textDescription: "De aroma doce e agradável,  será o elemento tranquilizador do ambiente, trazendo paz, romantismo e sensualidade.",
-                 niceMistures: ["Limão", "Ylang Ylang", "Lavanda", "Baunilha", "Coco"]
+    EssenceModel(value: "Roses", icon: "Rosas",
+                 smokeColor: "redSmoke", textDescription: "With a sweet and pleasant aroma, it will be the calming element of the ambience, bringing peace, romanticism and sensuality.",
+                 niceMistures: ["Lemon", "Ylang Ylang", "Lavender", "Vanilla", "Coconut"]
                 ),
-    EssenceModel(value: "Tangerina", icon: "Tangerina",
-                 smokeColor:"orangeSmoke",textDescription: "Aroma alegre, age como estimulante, reduzindo o estresse e aumentando a energia para produzir. ",
-                 niceMistures: ["Maracujá", "Limão", "Canela", "Baunilha"]
+    EssenceModel(value: "Tangerine", icon: "Tangerina",
+                 smokeColor:"orangeSmoke",textDescription: "Cheerful aroma, acts as a stimulant, reducing stress and increasing energy to produce.",
+                 niceMistures: ["Passion Fruit", "Lemon", "Cinnamon", "Vanilla"]
                 ),
-    EssenceModel(value: "Limão", icon: "Limao",
-                 smokeColor:"greenSmoke", textDescription: "Possui aroma cítrico e leve. Promove a concentração nos estudos e no trabalho, além de melhorar o humor e a resistência física e mental ao estresse.",
-                 niceMistures: ["Hortelã", "Rosas", "Tangerina", "Baunilha", "Ylang Ylang", "Flor de Cerejeira", "Coco"]
+    EssenceModel(value: "Lemon", icon: "Limao",
+                 smokeColor:"greenSmoke", textDescription: "It has a citrus and light aroma. It promotes concentration in studies and work, as well as improving mood and physical and mental resistance to stress.",
+                 niceMistures: ["Mint", "Roses", "Tangerine", "Vanilla", "Ylang Ylang", "Cherry Blossom", "Coconut"]
                 ),
-    EssenceModel(value: "Canela", icon: "Canela",
-                 smokeColor:"brownSmoke",textDescription: "Aroma estimulante que melhora o humor tem grande potencial afrodisíaco e anti-inflamatório.",
-                 niceMistures: ["Maracujá", "Rosas", "Tangerina", "Baunilha", "Ylang Ylang"]
+    EssenceModel(value: "Cinnamon", icon: "Canela",
+                 smokeColor:"brownSmoke",textDescription: "Stimulating aroma that improves mood has great aphrodisiac and anti-inflammatory potential.",
+                 niceMistures: ["Passion Fruit", "Roses", "Tangerine", "Vanilla", "Ylang Ylang"]
                 ),
-    EssenceModel(value: "Baunilha", icon: "Baunilha",
-                 smokeColor:"vanillaSmoke",textDescription: "Possui aroma perfumado, doce e delicado. Na aromaterapia, ajuda a amenizar os efeitos da ansiedade, nervosismo, depressão e insônia.",
-                 niceMistures: ["Hortelã", "Maracujá", "Rosas", "Tangerina", "Limão", "Canela", "Lavanda", "Ylang Ylang", "Coco"]
+    EssenceModel(value: "Vanilla", icon: "Baunilha",
+                 smokeColor:"vanillaSmoke",textDescription: "It has a fragrant, sweet and delicate aroma. In aromatherapy, it helps to alleviate the effects of anxiety, nervousness, depression and insomnia.",
+                 niceMistures: ["Mint", "Passion Fruit", "Roses", "Tangerine", "Lemon", "Cinnamon", "Lavender", "Ylang Ylang", "Coconut"]
                 ),
-    EssenceModel(value: "Lavanda", icon: "Lavanda",
-                 smokeColor: "purpleSmoke",textDescription: "Acalma, traz paz e equilíbrio para ambientes agitados. Também proporciona noites de sono regeneradoras.",
-                 niceMistures: ["Hortelã", "Rosas", "Baunilha", "Algodão"]
+    EssenceModel(value: "Lavender", icon: "Lavanda",
+                 smokeColor: "purpleSmoke",textDescription: "Calms, brings peace and balance to busy ambiences. It also provides regenerating nights sleep.",
+                 niceMistures: ["Mint", "Roses", "Vanilla", "Cotton"]
                 ),
     EssenceModel(value: "Ylang Ylang", icon: "Ylang",
-                 smokeColor:"yellowSmoke",textDescription: "Possui propriedades afrodisíacas e aroma exótico, além de diminuir a tensão nervosa e muscular.",
-                 niceMistures: ["Hortelã", "Rosas", "Limão", "Canela", "Baunilha"]
+                 smokeColor:"yellowSmoke",textDescription: "It has aphrodisiac properties and exotic aroma, in addition to decreasing nervous and muscular tension.",
+                 niceMistures: ["Mint", "Roses", "Lemon", "Cinnamon", "Vanilla"]
                 ),
-    EssenceModel(value: "Algodão", icon: "Algodao",
-                 smokeColor:"vanillaSmoke",textDescription: "Com notas amadeiradas, combate a insônia  e transmite frescor ao ambiente. Também tem potencial antidepressivo.",
-                 niceMistures: ["Maracujá", "Rosas", "Lavanda"]
+    EssenceModel(value: "Cotton", icon: "Algodao",
+                 smokeColor:"vanillaSmoke",textDescription: "With woody notes, it fights insomnia and transmits freshness to the environment. It also has antidepressant potential.",
+                 niceMistures: ["Passion Fruit", "Roses", "Lavender"]
                 ),
-    EssenceModel(value: "Flor de Cerejeira", icon: "Cerejeira",
-                 smokeColor: "pinkSmoke",textDescription: "Com aroma floral e adocicado, transmite sensação de conforto e aconchego, além de atuar como euforizante. Ideal para ambientes românticos.", niceMistures: ["Limão"]
+    EssenceModel(value: "Cherry Blossom", icon: "Cerejeira",
+                 smokeColor: "pinkSmoke",textDescription: "With a floral and sweet aroma, it transmits a sensation of comfort and coziness, in addition to acting as a euphoriator. Ideal for romantic ambiences.", niceMistures: ["Lemon"]
                 ),
-    EssenceModel(value: "Coco", icon: "Coco",
-                 smokeColor:"brownSmoke",textDescription: "Estimula o bem estar. Acalma os nervos e promove a paz espiritual. Além disso, possui propriedades calmantes para a pele, reduzindo inflamações e promovendo hidratação.",
-                 niceMistures: ["Rosas", "Limão", "Baunilha"]
+    EssenceModel(value: "Coconut", icon: "Coconut",
+                 smokeColor:"brownSmoke",textDescription: "Stimulates well-being. Calms the nerves and promotes spiritual peace. In addition, it has soothing properties for the skin, reducing inflammation and promoting hydration.",
+                 niceMistures: ["Roses", "Lemon", "Vanilla"]
                 )
     
 ]

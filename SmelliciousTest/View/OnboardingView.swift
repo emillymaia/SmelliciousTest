@@ -37,7 +37,7 @@ struct WelcomeView: View {
                 
                 Spacer().frame(height: 35)
                 
-                Text("Seja bem-vindo(a) ao Smelicious!")
+                Text("Hey you! Welcome to Smellicious!")
                     .fontWeight(.medium)
                     .font(.system(.title, design: .rounded))
                     .multilineTextAlignment(.center)
@@ -46,7 +46,7 @@ struct WelcomeView: View {
                     .padding(.bottom,30)
                     .frame(width: 350,alignment: .center)
                 
-                Text("O aplicativo que te ajuda a combinar os melhores aromas e tornar o seu dia mais agradável.")
+                Text("The app that helps you combine the best scents and make your day more pleasant")
                     .fontWeight(.regular)
                     .font(.system(.title3, design: .rounded))
                     .multilineTextAlignment(.center)
@@ -77,7 +77,7 @@ struct DragAndDropView: View {
                 
                 Spacer().frame(height: 20)
                 
-                Text("Vamos em busca do match perfeito?")
+                Text("Are you looking for the perfect match?")
                     .fontWeight(.medium)
                     .font(.system(.title, design: .rounded))
                     .multilineTextAlignment(.center)
@@ -86,7 +86,7 @@ struct DragAndDropView: View {
                     .padding(.bottom,20)
                     .frame(width: 350,alignment: .center)
                 
-                Text("Para encontrar seu aroma é necessário escolher duas essências diferentes que mais combinam com seu mood e arrastar até a área indicada.")
+                Text("To discover new aromas, choose two different essences that best match your mood and drag them to the indicated area")
                     .fontWeight(.regular)
                     .font(.system(.title3, design: .rounded))
                     .multilineTextAlignment(.center)
@@ -110,7 +110,7 @@ struct PropertiesView: View {
                     .resizable()
                     .frame(width: 200, height: 200, alignment: .center)
                 
-                Text("Dúvida em qual essência mais combina com você?")
+                Text("Are you in doubt which essence best matches you?")
                     .fontWeight(.medium)
                     .font(.system(.title, design: .rounded))
                     .multilineTextAlignment(.center)
@@ -118,7 +118,15 @@ struct PropertiesView: View {
                     .foregroundColor(Color(red: 50/255, green: 73/255, blue: 60/255))
                     .padding(.bottom,30)
                 
-                Text("Ao clicar na essência do seu interesse, as suas propriedades aromáticas serão exibidas. E aí, vamos encontrar sua combinação perfeita?")
+                Text("Click on the essence of your interest and discover all the benefits it can bring")
+                    .fontWeight(.regular)
+                    .font(.system(.title3, design: .rounded))
+                    .multilineTextAlignment(.center)
+                    .lineSpacing(8)
+                    .foregroundColor(Color(red: 50/255, green: 73/255, blue: 60/255))
+                    .padding(.bottom,30)
+                
+                Text("So, let's find your perfect match?")
                     .fontWeight(.regular)
                     .font(.system(.title3, design: .rounded))
                     .multilineTextAlignment(.center)
@@ -127,7 +135,7 @@ struct PropertiesView: View {
                     .padding(.bottom,30)
                 
                 NavigationLink(destination: CombineEssencesView(), label: {
-                    Text("Começar")
+                    Text("Start")
                     .fontWeight(.medium)
                     .font(.system(.title3, design: .rounded))
                 })
