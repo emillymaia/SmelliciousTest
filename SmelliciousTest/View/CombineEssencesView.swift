@@ -21,6 +21,8 @@ struct CombineEssencesView: View {
     @State var mutedAudio = false
     @State var audioPlayer: AVAudioPlayer!
     
+    @State var isPlaying = true
+    
     func playSounds(_ sound : String) {
         guard let soundURL = Bundle.main.url(forResource: sound, withExtension: nil) else {
             fatalError("Unable to find \(sound) in bundle")
@@ -49,9 +51,15 @@ struct CombineEssencesView: View {
     
     func mutedButton() -> some View {
         Button {
-            audioPlayer.stop()
+            if isPlaying {
+                audioPlayer.pause()
+                isPlaying = false
+            } else {
+                audioPlayer.play()
+                isPlaying = true
+            }
         }label: {
-            Image(systemName: "speaker.slash")
+            Image(systemName: isPlaying ? "speaker.slash" : "speaker.wave.2")
                 .resizable()
         }
         .foregroundColor(.black)
