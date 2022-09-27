@@ -35,7 +35,9 @@
 		ABBBC5DD28D3529800AF7895 /* SizeComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBBC5DC28D3529800AF7895 /* SizeComponents.swift */; };
 		ABBBC5E028D3536500AF7895 /* CombineEssencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBBC5DF28D3536500AF7895 /* CombineEssencesView.swift */; };
 		ABBBC5E328D3543900AF7895 /* CombineEssencesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBBC5E228D3543900AF7895 /* CombineEssencesViewModel.swift */; };
-		AE06D3E228E29A08009140EC /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE06D3E128E29A08009140EC /* sound.mp3 */; };
+		AE06D3E228E29A08009140EC /* humidifySound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE06D3E128E29A08009140EC /* humidifySound.mp3 */; };
+		AE7CDFC828E336A50008C132 /* drop.wav in Resources */ = {isa = PBXBuildFile; fileRef = AE7CDFC628E336A50008C132 /* drop.wav */; };
+		AE7CDFC928E336A50008C132 /* drag.wav in Resources */ = {isa = PBXBuildFile; fileRef = AE7CDFC728E336A50008C132 /* drag.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,7 +87,9 @@
 		ABBBC5DC28D3529800AF7895 /* SizeComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeComponents.swift; sourceTree = "<group>"; };
 		ABBBC5DF28D3536500AF7895 /* CombineEssencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineEssencesView.swift; sourceTree = "<group>"; };
 		ABBBC5E228D3543900AF7895 /* CombineEssencesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineEssencesViewModel.swift; sourceTree = "<group>"; };
-		AE06D3E128E29A08009140EC /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound.mp3; sourceTree = "<group>"; };
+		AE06D3E128E29A08009140EC /* humidifySound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = humidifySound.mp3; sourceTree = "<group>"; };
+		AE7CDFC628E336A50008C132 /* drop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = drop.wav; path = "../../../../../../Downloads/sounds fx 2/drop.wav"; sourceTree = "<group>"; };
+		AE7CDFC728E336A50008C132 /* drag.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = drag.wav; path = "../../../../../../Downloads/sounds fx 2/drag.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,7 @@
 		ABBBC5AD28D351E700AF7895 /* SmelliciousTest */ = {
 			isa = PBXGroup;
 			children = (
+				AE7CDFC128E333EE0008C132 /* Sounds */,
 				0DBACC8128D8A74F00DAE036 /* Lottie */,
 				ABBBC5E128D353EA00AF7895 /* View Model */,
 				ABBBC5DE28D3533400AF7895 /* View */,
@@ -210,7 +215,6 @@
 		ABBBC5DE28D3533400AF7895 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AE06D3E128E29A08009140EC /* sound.mp3 */,
 				ABBBC5B028D351E700AF7895 /* ContentView.swift */,
 				ABBBC5DF28D3536500AF7895 /* CombineEssencesView.swift */,
 				AB6FE7CB28D49CF7008A683E /* popupView.swift */,
@@ -229,6 +233,16 @@
 				0DE5B5F228DB354000670B59 /* GifModel.swift */,
 			);
 			path = "View Model";
+			sourceTree = "<group>";
+		};
+		AE7CDFC128E333EE0008C132 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				AE7CDFC728E336A50008C132 /* drag.wav */,
+				AE7CDFC628E336A50008C132 /* drop.wav */,
+				AE06D3E128E29A08009140EC /* humidifySound.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,11 +357,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE06D3E228E29A08009140EC /* sound.mp3 in Resources */,
+				AE7CDFC928E336A50008C132 /* drag.wav in Resources */,
+				AE06D3E228E29A08009140EC /* humidifySound.mp3 in Resources */,
 				ABBBC5B628D351E800AF7895 /* Preview Assets.xcassets in Resources */,
 				0DBACC9228D8ABB200DAE036 /* orangeSmoke.json in Resources */,
 				ABBBC5B328D351E800AF7895 /* Assets.xcassets in Resources */,
 				0D3704BB28E1DFAE004CB713 /* defaultSmoke.json in Resources */,
+				AE7CDFC828E336A50008C132 /* drop.wav in Resources */,
 				0DBACC9728D8ABB300DAE036 /* purpleSmoke.json in Resources */,
 				0D3704C528E1F8A6004CB713 /* dragAndDrop.gif in Resources */,
 				0DBACC9328D8ABB300DAE036 /* pinkSmoke.json in Resources */,

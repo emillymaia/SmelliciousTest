@@ -8,7 +8,6 @@ import Algorithms
 import Lottie
 import AVFoundation
 
-
 struct CombineEssencesView: View {
     
     @State var essences: [EssenceModel] = essences_
@@ -20,21 +19,53 @@ struct CombineEssencesView: View {
     @State var isPopover = false
     @State var mutedAudio = false
     @State var audioPlayer: AVAudioPlayer!
-    
+    @State var humidify: AVAudioPlayer!
     @State var isPlaying = true
     
-    func playSounds(_ sound : String) {
-        guard let soundURL = Bundle.main.url(forResource: sound, withExtension: nil) else {
-            fatalError("Unable to find \(sound) in bundle")
+    func drag(){
+        let pathSounds = Bundle.main.path(forResource: "drag", ofType: "wav")!
+                let url = URL(fileURLWithPath: pathSounds)
+    do
+          {
+              audioPlayer = try AVAudioPlayer(contentsOf: url)
+              audioPlayer?.play()
+              audioPlayer.volume = 0.3
+              
+          }catch{
+              print(error)
+              
+          }
+          
+      }
+    
+    func drop(){
+        let pathSounds = Bundle.main.path(forResource: "drop", ofType: "wav")!
+                let url = URL(fileURLWithPath: pathSounds)
+    do
+          {
+              audioPlayer = try AVAudioPlayer(contentsOf: url)
+              audioPlayer?.play()
+              audioPlayer.volume = 0.3
+              
+          }catch{
+              print(error)
+              
+          }
+          
+      }
+    
+    func playSounds(_ humidifySound : String) {
+        guard let soundURL = Bundle.main.url(forResource: humidifySound, withExtension: nil) else {
+            fatalError("Unable to find \(humidifySound) in bundle")
         }
         do {
-            audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
+            humidify = try AVAudioPlayer(contentsOf: soundURL)
         } catch {
             print(error.localizedDescription)
         }
-        audioPlayer.play()
-        audioPlayer.volume = 0.2
-        audioPlayer.numberOfLoops = 5
+        humidify.play()
+        humidify.volume = 0.2
+        humidify.numberOfLoops = 5
     }
     
     func ResetButton() -> some View {
@@ -52,10 +83,10 @@ struct CombineEssencesView: View {
     func mutedButton() -> some View {
         Button {
             if isPlaying {
-                audioPlayer.pause()
+                humidify.pause()
                 isPlaying = false
             } else {
-                audioPlayer.play()
+                humidify.play()
                 isPlaying = true
             }
         }label: {
@@ -95,6 +126,7 @@ struct CombineEssencesView: View {
                                 }
                                 essence1 = droppedEssence
                                 checkMisture()
+                                drop()
                                 smokeName = (essence1?.smokeColor)!
                             }
                             
@@ -104,6 +136,7 @@ struct CombineEssencesView: View {
                                 }
                                 essence2 = droppedEssence
                                 checkMisture()
+                                drop()
                                 smokeName = (essence2?.smokeColor)!
                             }
                         }
@@ -130,7 +163,7 @@ struct CombineEssencesView: View {
         .overlay {
             popupView(popupPositive: $popupPositive, popupNegative: $popupNegative, smokeName: $smokeName, essence1: $essence1, essence2: $essence2)
                 .onAppear(perform: {
-                    playSounds("sound.mp3")
+                    playSounds("humidifySound.mp3")
                 })
         }
     }
@@ -154,6 +187,7 @@ struct CombineEssencesView: View {
                         }
                         // MARK: - Adding Drag Operation
                         .onDrag {
+                            drag()
                             //Returning ID to find wich Item is Moving
                             if row.id == essence1?.id || row.id == essence2?.id {
                                 return NSItemProvider()
@@ -199,15 +233,8 @@ struct CombineEssencesView: View {
         } else {
             withAnimation {
                 popupNegative = true
-                
             }
         }
         
-    }
-}
-
-struct CombineEssencesView_Previews: PreviewProvider {
-    static var previews: some View {
-        CombineEssencesView()
     }
 }
