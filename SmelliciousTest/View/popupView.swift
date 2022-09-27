@@ -48,7 +48,7 @@ struct popupView: View {
                         .font(Font.title.weight(.semibold))
                         .font(.system(size: 10))
                     
-                    Text("A combinação escolhida não parece combinar. Que tal tentar uma nova combinacão de fragrância para melhorar seu dia?")
+                    Text(essence1?.badMisture ?? "F")
                         .foregroundColor(.white)
                         .font(.system(size: 12))
                         .padding(.trailing, 10)
