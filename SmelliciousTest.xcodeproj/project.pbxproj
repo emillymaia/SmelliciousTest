@@ -35,6 +35,8 @@
 		ABBBC5DD28D3529800AF7895 /* SizeComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBBC5DC28D3529800AF7895 /* SizeComponents.swift */; };
 		ABBBC5E028D3536500AF7895 /* CombineEssencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBBC5DF28D3536500AF7895 /* CombineEssencesView.swift */; };
 		ABBBC5E328D3543900AF7895 /* CombineEssencesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBBC5E228D3543900AF7895 /* CombineEssencesViewModel.swift */; };
+		ABC281D228E3306D00845937 /* EssenceDescriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC281D128E3306D00845937 /* EssenceDescriptionViewModel.swift */; };
+		ABC281D528E333FF00845937 /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = ABC281D428E333FF00845937 /* BottomSheet */; };
 		AE06D3E228E29A08009140EC /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE06D3E128E29A08009140EC /* sound.mp3 */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +87,7 @@
 		ABBBC5DC28D3529800AF7895 /* SizeComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeComponents.swift; sourceTree = "<group>"; };
 		ABBBC5DF28D3536500AF7895 /* CombineEssencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineEssencesView.swift; sourceTree = "<group>"; };
 		ABBBC5E228D3543900AF7895 /* CombineEssencesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineEssencesViewModel.swift; sourceTree = "<group>"; };
+		ABC281D128E3306D00845937 /* EssenceDescriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssenceDescriptionViewModel.swift; sourceTree = "<group>"; };
 		AE06D3E128E29A08009140EC /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +97,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB6FE7D928D8BB12008A683E /* Algorithms in Frameworks */,
+				ABC281D528E333FF00845937 /* BottomSheet in Frameworks */,
 				AB6FE7D128D4B798008A683E /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,6 +231,7 @@
 				ABBBC5E228D3543900AF7895 /* CombineEssencesViewModel.swift */,
 				0D3704C428E1F8A6004CB713 /* dragAndDrop.gif */,
 				0DE5B5F228DB354000670B59 /* GifModel.swift */,
+				ABC281D128E3306D00845937 /* EssenceDescriptionViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -250,6 +255,7 @@
 			packageProductDependencies = (
 				AB6FE7D028D4B798008A683E /* Lottie */,
 				AB6FE7D828D8BB12008A683E /* Algorithms */,
+				ABC281D428E333FF00845937 /* BottomSheet */,
 			);
 			productName = SmelliciousTest;
 			productReference = ABBBC5AB28D351E700AF7895 /* SmelliciousTest.app */;
@@ -326,6 +332,7 @@
 			packageReferences = (
 				AB6FE7CF28D4B798008A683E /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				AB6FE7D728D8BB12008A683E /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+				ABC281D328E333FF00845937 /* XCRemoteSwiftPackageReference "BottomSheet" */,
 			);
 			productRefGroup = ABBBC5AC28D351E700AF7895 /* Products */;
 			projectDirPath = "";
@@ -382,6 +389,7 @@
 			files = (
 				ABBBC5DD28D3529800AF7895 /* SizeComponents.swift in Sources */,
 				AB6FE7CC28D49CF7008A683E /* popupView.swift in Sources */,
+				ABC281D228E3306D00845937 /* EssenceDescriptionViewModel.swift in Sources */,
 				0DBACC7428D8882900DAE036 /* LottieView.swift in Sources */,
 				0DE5B5F128D9FD5800670B59 /* OnboardingView.swift in Sources */,
 				0DE5B5FE28DB511300670B59 /* SplashScreenView.swift in Sources */,
@@ -729,6 +737,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		ABC281D328E333FF00845937 /* XCRemoteSwiftPackageReference "BottomSheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamfootdev/BottomSheet";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -741,6 +757,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AB6FE7D728D8BB12008A683E /* XCRemoteSwiftPackageReference "swift-algorithms" */;
 			productName = Algorithms;
+		};
+		ABC281D428E333FF00845937 /* BottomSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABC281D328E333FF00845937 /* XCRemoteSwiftPackageReference "BottomSheet" */;
+			productName = BottomSheet;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

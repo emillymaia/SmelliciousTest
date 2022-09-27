@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import BottomSheet
 
 // MARK: - CHaracter Model and Sample Data
 
@@ -91,7 +92,7 @@ struct ImageElementComponent: View {
                     .frame(width: 90,
                            height: 90, alignment: .leading)
                     .overlay(Circle().stroke(Color.init( red: 0.19, green: 0.28, blue: 0.23, opacity: 0.8), lineWidth: 3))
-            }.popover(isPresented: self.$isPopover, arrowEdge: .trailing) {
+            }.bottomSheet(isPresented: self.$isPopover, detents: [.medium(), .large()]) {
                 PopoverDescription()
             }.buttonStyle(PlainButtonStyle())
         }
