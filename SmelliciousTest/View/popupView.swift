@@ -43,14 +43,13 @@ struct popupView: View {
                     .padding(.trailing, 15)
                 
                 VStack(alignment: .leading) {
-                    Text("Ooops!")
+                    Text("Oh no!")
                         .foregroundColor(.white)
-                        .font(Font.title.weight(.semibold))
-                        .font(.system(size: 10))
-                    
-                    Text("A combinação escolhida não parece combinar. Que tal tentar uma nova combinacão de fragrância para melhorar seu dia?")
+                        .font(.system(.title, design: .rounded))
+
+                    Text(essence1?.badMisture ?? "F")
                         .foregroundColor(.white)
-                        .font(.system(size: 12))
+                        .font(.system(size: 14, design: .rounded))
                         .padding(.trailing, 10)
                 }
                 
@@ -61,7 +60,7 @@ struct popupView: View {
                     popupNegative = false
                 }
             }) {
-                Text("Dimiss")
+                Text("Dismiss")
                     .frame(maxWidth: .infinity, maxHeight: 45)
                     .background(Color(.white))
                     .foregroundColor(.black)
@@ -92,12 +91,11 @@ struct popupView: View {
                 VStack(alignment: .leading) {
                     Text("Yaaaay!")
                         .foregroundColor(.white)
-                        .font(Font.title.weight(.semibold))
-                        .font(.system(size: 10))
+                        .font(.system(.title, design: .rounded))
                     
-                    Text("Sua combinação é um sucesso. Relaxe e aproveite seu novo aroma! Que tal ler um livro para deixar esse momento perfeito?")
+                    Text("Your combination is a success! Enjoy your new scent. How about reading a book to make this moment even more perfect?")
                         .foregroundColor(.white)
-                        .font(.system(size: 12))
+                        .font(.system(size: 14, design: .rounded))
                         .padding(.trailing, 10)
                 }
                 
@@ -109,7 +107,7 @@ struct popupView: View {
                     popupPositive = false
                 }
             }) {
-                Text("Dimiss")
+                Text("Dismiss")
                     .frame(maxWidth: .infinity, maxHeight: 45)
                     .background(Color(.white))
                     .foregroundColor(.black)
