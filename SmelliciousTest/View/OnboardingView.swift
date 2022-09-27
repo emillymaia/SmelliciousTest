@@ -27,7 +27,7 @@ struct OnboardingView: View {
 struct WelcomeView: View {
     var body: some View{
         ZStack{
-            Color.init(red: 1, green: 0.92, blue: 0.93 )
+            Color.init(red: 0.89, green: 0.88, blue: 0.99)
                 .edgesIgnoringSafeArea(.all)
             
             VStack{
@@ -62,7 +62,7 @@ struct WelcomeView: View {
 struct DragAndDropView: View {
     var body: some View{
         ZStack{
-            Color.init( red: 1, green: 0.92, blue: 0.93 )
+            Color.init( red: 0.89, green: 0.88, blue: 0.99 )
                 .edgesIgnoringSafeArea(.all)
             
             VStack{

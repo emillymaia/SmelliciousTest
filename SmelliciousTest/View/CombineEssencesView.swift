@@ -106,7 +106,10 @@ struct CombineEssencesView: View {
                         Text("Elements")
                             .font(.system(.title, design: .rounded))
                             .frame(width: 132, height: 34, alignment: .bottom)
+                        
                         DragArea()
+                        Divider()
+                            .frame(width:330)
                     }
                     
                 }.ignoresSafeArea()
