@@ -70,10 +70,10 @@ struct DragAndDropView: View {
                 GifImage("dragAndDrop")
                     .frame(width: 300, height: 300, alignment: .center)
                     .overlay(
-                           RoundedRectangle(cornerRadius: 16)
+                        RoundedRectangle(cornerRadius: 16)
                             .stroke(Color(red: 50/255, green: 73/255, blue: 60/255), lineWidth: 1).blur(radius: 0.3)
                             .shadow(color:Color(red: 50/255, green: 73/255, blue: 60/255), radius: 1)
-                       )
+                    )
                 
                 Spacer().frame(height: 20)
                 
@@ -136,8 +136,8 @@ struct PropertiesView: View {
                 
                 NavigationLink(destination: CombineEssencesView(), label: {
                     Text("Start")
-                    .fontWeight(.medium)
-                    .font(.system(.title3, design: .rounded))
+                        .fontWeight(.medium)
+                        .font(.system(.title3, design: .rounded))
                 })
                 .navigationBarHidden(true)
                 .navigationBarBackButtonHidden(true)

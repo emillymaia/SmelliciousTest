@@ -6,6 +6,8 @@
 import SwiftUI
 import Algorithms
 import Lottie
+import AVFoundation
+
 
 struct CombineEssencesView: View {
     
@@ -16,6 +18,22 @@ struct CombineEssencesView: View {
     @State var popupNegative = false
     @State var smokeName = "defaultSmoke"
     @State var isPopover = false
+    @State var mutedAudio = false
+    @State var audioPlayer: AVAudioPlayer!
+    
+    func playSounds(_ sound : String) {
+        guard let soundURL = Bundle.main.url(forResource: sound, withExtension: nil) else {
+            fatalError("Unable to find \(sound) in bundle")
+        }
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
+        } catch {
+            print(error.localizedDescription)
+        }
+        audioPlayer.play()
+        audioPlayer.volume = 0.2
+        audioPlayer.numberOfLoops = 5
+    }
     
     func ResetButton() -> some View {
         Button {
@@ -26,9 +44,18 @@ struct CombineEssencesView: View {
             Image(systemName: "arrow.clockwise")
                 .resizable()
         }
-        .foregroundColor(Color.init( red: 235/255, green: 252/255, blue: 225/255))
+        .foregroundColor(.black)
     }
     
+    func mutedButton() -> some View {
+        Button {
+            audioPlayer.stop()
+        }label: {
+            Image(systemName: "speaker.slash")
+                .resizable()
+        }
+        .foregroundColor(.black)
+    }
     
     
     var body: some View {
@@ -85,14 +112,18 @@ struct CombineEssencesView: View {
                 }.ignoresSafeArea()
                     .toolbar {
                         ResetButton()
+                        mutedButton()
                     }
             }
         }
         .overlay {
             popupView(popupPositive: $popupPositive, popupNegative: $popupNegative, smokeName: $smokeName, essence1: $essence1, essence2: $essence2)
-            
-       }
+                .onAppear(perform: {
+                    playSounds("sound.mp3")
+                })
+        }
     }
+    
     
     
     @ViewBuilder
@@ -107,7 +138,6 @@ struct CombineEssencesView: View {
                             let isSelected = row == essence1 || row == essence2
                             ImageElementComponent(essence: row)
                                 .opacity(isSelected ? 0.5 : 1.0)
-                            
                             
                             Text(row.value)
                         }
@@ -126,7 +156,7 @@ struct CombineEssencesView: View {
                                 .frame(width: SizesComponents.widthScreen*0.20,
                                        height: SizesComponents.widthScreen*0.20, alignment: .leading)
                                 .contentShape(.dragPreview, Circle())
-//                                .disabled(true)
+                            //                                .disabled(true)
                         }
                     }
                 }
@@ -158,6 +188,7 @@ struct CombineEssencesView: View {
         } else {
             withAnimation {
                 popupNegative = true
+                
             }
         }
         
