@@ -36,9 +36,10 @@ struct popupView: View {
         VStack{
             HStack{
                 Image("sad")
-                    .frame(width: 75 , height: 75, alignment: .bottom)
+                    .frame(width: 80 , height: 80, alignment: .bottom)
                     .clipShape(Circle())
-                    .padding([.top, .leading, .bottom], 20)
+                    .padding([.top, .leading], 20)
+                    .padding(.bottom,15)
                     .padding(.trailing, 15)
                 
                 VStack(alignment: .leading) {
@@ -82,9 +83,10 @@ struct popupView: View {
         VStack{
             HStack{
                 Image("happy")
-                    .frame(width: 75 , height: 75, alignment: .bottom)
+                    .frame(width: 80 , height: 80, alignment: .bottom)
                     .clipShape(Circle())
-                    .padding([.top, .leading, .bottom], 20)
+                    .padding([.top, .leading], 20)
+                    .padding(.bottom,15)
                     .padding(.trailing, 15)
                 
                 VStack(alignment: .leading) {
