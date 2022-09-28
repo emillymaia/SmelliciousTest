@@ -44,6 +44,7 @@ struct popupView: View {
                 
                 VStack(alignment: .leading) {
                     Text("Oh no!")
+                        .padding(.top,3)
                         .foregroundColor(.white)
                         .font(.system(.title, design: .rounded))
 
@@ -70,7 +71,7 @@ struct popupView: View {
         }
         .background {
             Rectangle()
-                .fill(Color(red: 0.68, green: 0.55, blue: 0.53))
+                .fill(Color(red: 208/255, green: 196/255, blue: 223/255))
                 .foregroundColor(.white)
             
         }
@@ -90,6 +91,7 @@ struct popupView: View {
                 
                 VStack(alignment: .leading) {
                     Text("Yaaaay!")
+                        .padding(.top,3)
                         .foregroundColor(.white)
                         .font(.system(.title, design: .rounded))
                     
@@ -117,7 +119,7 @@ struct popupView: View {
         }
         .background {
             Rectangle()
-                .fill(Color(red: 0.40, green: 0.55, blue: 0.46))
+                .fill(Color(red: 250/255, green: 197/255, blue: 227/255))
                 .foregroundColor(.white)
         }
         .clipShape(RoundedRectangle(cornerRadius: 15))
