@@ -70,7 +70,7 @@ struct DragAndDropView: View {
                 GifImage("dragAndDrop")
                     .frame(width: 300, height: 300, alignment: .center)
                     .overlay(
-                        RoundedRectangle(cornerRadius: 16)
+                        RoundedRectangle(cornerRadius: 8)
                             .stroke(Color(red: 50/255, green: 73/255, blue: 60/255), lineWidth: 1).blur(radius: 0.3)
                             .shadow(color:Color(red: 50/255, green: 73/255, blue: 60/255), radius: 1)
                     )

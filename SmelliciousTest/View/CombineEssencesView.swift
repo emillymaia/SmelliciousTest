@@ -121,6 +121,9 @@ struct CombineEssencesView: View {
                         HStack(spacing: 31) {
                             
                             DropArea(essence: essence1){ id in
+                                let impact = UIImpactFeedbackGenerator(style: .heavy)
+                                impact.impactOccurred()
+                                hapticFeedback()
                                 let droppedEssence = essences.first { essence in
                                     return essence.id == id
                                 }
@@ -131,6 +134,9 @@ struct CombineEssencesView: View {
                             }
                             
                             DropArea2(essence: essence2) { id in
+                                let impact = UIImpactFeedbackGenerator(style: .heavy)
+                                impact.impactOccurred()
+                                hapticFeedback()
                                 let droppedEssence = essences.first { essence in
                                     return essence.id == id
                                 }
@@ -238,5 +244,14 @@ struct CombineEssencesView: View {
             }
         }
         
+    }
+}
+
+extension View {
+    func hapticFeedback (style: UIImpactFeedbackGenerator.FeedbackStyle = .heavy) -> some View {
+        self.onTapGesture {
+            let impact = UIImpactFeedbackGenerator(style: .heavy)
+            impact.impactOccurred()
+        }
     }
 }
