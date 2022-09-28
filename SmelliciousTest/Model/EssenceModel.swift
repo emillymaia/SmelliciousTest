@@ -93,20 +93,43 @@ struct ImageElementComponent: View {
                            height: 90, alignment: .leading)
                     .overlay(Circle().stroke(Color.init( red: 0.19, green: 0.28, blue: 0.23, opacity: 0.8), lineWidth: 3))
             }.bottomSheet(isPresented: self.$isPopover, detents: [.medium(), .large()]) {
-                PopoverDescription()
+                ZStack {
+                    Color.init(red: 0.89, green: 0.88, blue: 0.99)
+                    EssenceDescription(essence: essence)
+                }
+                .ignoresSafeArea()
+  
             }.buttonStyle(PlainButtonStyle())
         }
         
     }
     
-    @ViewBuilder
-    func PopoverDescription() -> some View {
-        VStack {
-            Text(essence.textDescription)
-                .padding()
-        }
-        .padding()
-    }
-    
 }
 
+struct EssenceDescription: View {
+    let essence: EssenceModel
+    
+    var body: some View {
+        VStack(spacing: .zero) {
+            Text(essence.value)
+                .font(
+                    .system(size: 18, weight: .bold)
+                )
+                .padding()
+            
+            Image(essence.icon)
+                .resizable()
+                .cornerRadius(100)
+                .frame(width: 100,
+                       height: 100, alignment: .leading)
+                .padding()
+
+          
+            Text(essence.textDescription)
+            Spacer()
+        }
+        .padding()
+        .multilineTextAlignment(.center)
+        .background(Color.init(red: 0.89, green: 0.88, blue: 0.99))
+    }
+}
