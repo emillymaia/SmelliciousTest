@@ -17,6 +17,7 @@ struct OnboardingView: View {
             TabView {
                 WelcomeView()
                 DragAndDropView()
+                PropertiesView(showSheet: $showSheet)
             }
             .edgesIgnoringSafeArea(.all)
             .tabViewStyle(.page)
@@ -70,7 +71,7 @@ struct DragAndDropView: View {
                 GifImage("dragAndDrop")
                     .frame(width: 300, height: 300, alignment: .center)
                     .overlay(
-                        RoundedRectangle(cornerRadius: 8)
+                        RoundedRectangle(cornerRadius: 5)
                             .stroke(Color(red: 50/255, green: 73/255, blue: 60/255), lineWidth: 1).blur(radius: 0.3)
                             .shadow(color:Color(red: 50/255, green: 73/255, blue: 60/255), radius: 1)
                     )
@@ -100,15 +101,25 @@ struct DragAndDropView: View {
 }
 
 struct PropertiesView: View {
+    
+    @Binding var showSheet: Bool
+    
     var body: some View{
         ZStack{
-            Color.init( red: 1, green: 0.92, blue: 0.93 )
+            Color.init( red: 0.89, green: 0.88, blue: 0.99 )
                 .edgesIgnoringSafeArea(.all)
             
             VStack{
-                Image("")
-                    .resizable()
-                    .frame(width: 200, height: 200, alignment: .center)
+                
+                GifImage("properties")
+                    .frame(width: 300, height: 300, alignment: .center)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 5)
+                            .stroke(Color(red: 50/255, green: 73/255, blue: 60/255), lineWidth: 1).blur(radius: 0.3)
+                            .shadow(color:Color(red: 50/255, green: 73/255, blue: 60/255), radius: 1)
+                    )
+                
+                Spacer().frame(height: 20)
                 
                 Text("Are you in doubt which essence best matches you?")
                     .fontWeight(.medium)
@@ -118,7 +129,10 @@ struct PropertiesView: View {
                     .foregroundColor(Color(red: 50/255, green: 73/255, blue: 60/255))
                     .padding(.bottom,30)
                 
-                Text("Click on the essence of your interest and discover all the benefits it can bring")
+                Text("""
+                    Click on the essence of your interest and discover all the benefits it can bring
+                    So, let's find your perfect match?
+                    """)
                     .fontWeight(.regular)
                     .font(.system(.title3, design: .rounded))
                     .multilineTextAlignment(.center)
@@ -126,21 +140,16 @@ struct PropertiesView: View {
                     .foregroundColor(Color(red: 50/255, green: 73/255, blue: 60/255))
                     .padding(.bottom,30)
                 
-                Text("So, let's find your perfect match?")
-                    .fontWeight(.regular)
-                    .font(.system(.title3, design: .rounded))
-                    .multilineTextAlignment(.center)
-                    .lineSpacing(8)
+                Button(action: {
+                    showSheet.toggle()
+                }, label: {
+                    Text("Let's go!")
                     .foregroundColor(Color(red: 50/255, green: 73/255, blue: 60/255))
-                    .padding(.bottom,30)
-                
-                NavigationLink(destination: CombineEssencesView(), label: {
-                    Text("Start")
-                        .fontWeight(.medium)
-                        .font(.system(.title3, design: .rounded))
+                    .fontWeight(.medium)
+                    .font(.system(.title2, design: .rounded))
+                    .frame(width: 120,height: 50)
+                    .background(RoundedRectangle(cornerRadius: 16).fill(Color.init(red: 235/255, green: 252/255, blue: 225/255)))
                 })
-                .navigationBarHidden(true)
-                .navigationBarBackButtonHidden(true)
                 
             }
         }

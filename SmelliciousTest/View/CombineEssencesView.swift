@@ -189,28 +189,29 @@ struct CombineEssencesView: View {
                             let isSelected = row == essence1 || row == essence2
                             ImageElementComponent(essence: row)
                                 .opacity(isSelected ? 0.5 : 1.0)
-                            
+                                .contentShape(.dragPreview, Circle())
+                                .onDrag {
+                                    drag()
+                                    //Returning ID to find wich Item is Moving
+                                    if row.id == essence1?.id || row.id == essence2?.id {
+                                        return NSItemProvider()
+                                    } else {
+                                        return .init(contentsOf: URL(string:row.id))!
+                                    }
+                                } preview: {
+                                    Image(row.icon)
+                                        .resizable()
+                                        .cornerRadius(900)
+                                        .frame(width: SizesComponents.widthScreen*0.20,
+                                               height: SizesComponents.widthScreen*0.20, alignment: .leading)
+                                        .contentShape(.dragPreview, Circle())
+                                    //                                .disabled(true)
+                                }
                             Text(row.value)
                                 .foregroundColor(Color.init( red: 0.19, green: 0.28, blue: 0.23))
                         }
                         // MARK: - Adding Drag Operation
-                        .onDrag {
-                            drag()
-                            //Returning ID to find wich Item is Moving
-                            if row.id == essence1?.id || row.id == essence2?.id {
-                                return NSItemProvider()
-                            } else {
-                                return .init(contentsOf: URL(string:row.id))!
-                            }
-                        } preview: {
-                            Image(row.icon)
-                                .resizable()
-                                .cornerRadius(900)
-                                .frame(width: SizesComponents.widthScreen*0.20,
-                                       height: SizesComponents.widthScreen*0.20, alignment: .leading)
-                                .contentShape(.dragPreview, Circle())
-                            //                                .disabled(true)
-                        }
+                        
                     }
                 }
             }
