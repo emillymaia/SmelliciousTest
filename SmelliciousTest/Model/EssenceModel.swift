@@ -32,19 +32,19 @@ struct EssenceModel: Identifiable, Hashable, Equatable {
 var essences_: [EssenceModel] = [
     EssenceModel(value: "Lavender", icon: "Lavanda",
                  smokeColor: "purpleSmoke",textDescription: "Calms, brings peace and balance to busy ambiences. It also provides regenerating nights sleep.", badMisture: "Lavender is a floral scent, combine it with woody elements and see what a success!",
-                 niceMistures: ["Cinnamon", "Roses", "Cotton"]
+                 niceMistures: ["Cinnamon", "Cotton"]
                 ),
     EssenceModel(value: "Passion Fruit", icon: "Maracuja",
                  smokeColor: "yellowSmoke", textDescription: "With relaxing properties, it reduces stress and anxiety and provides a peaceful sleep.", badMisture: "Because it is a citrus aroma, passion fruit combines more with woody or menthol essences. Try these combinations and it will be a hit!",
-                 niceMistures: ["Tangerine", "Cinnamon", "Vanilla" , "Cotton", "Peppermint"]
+                 niceMistures: ["Cinnamon", "Cotton", "Peppermint"]
                 ),
     EssenceModel(value: "Coconut", icon: "Coco",
                  smokeColor:"brownSmoke",textDescription: "Stimulates well-being. Calms the nerves and promotes spiritual peace. In addition, it has soothing properties for the skin, reducing inflammation and promoting hydration.", badMisture: "Coconut is a sweet fruity essence. Try combining it with more acidic elements.",
                  niceMistures: ["Lemon", "Passion Fruit"]
                 ),
     EssenceModel(value: "Tangerine", icon: "Tangerina",
-                 smokeColor:"orangeSmoke",textDescription: "Cheerful aroma, acts as a stimulant, reducing stress and increasing energy to produce.", badMisture: "Being citrusy, tangerine goes well with minty or woody essences. Try these combinations, you will love it!",
-                 niceMistures: ["Passion Fruit", "Lemon", "Cinnamon", "Vanilla", "Cotton", "Peppermint"]
+                 smokeColor:"orangeSmoke",textDescription: "Cheerful aroma, acts as a stimulant, reducing stress and increasing energy to produce.", badMisture: "Being citrusy, tangerine goes well with minty, sweety or woody essences. Try these combinations, you will love it!",
+                 niceMistures: ["Cinnamon", "Vanilla", "Cotton", "Peppermint"]
                 ),
     EssenceModel(value: "Cherry Blossom", icon: "Cerejeira",
                  smokeColor: "pinkSmoke",textDescription: "With a floral and sweet aroma, it transmits a sensation of comfort and coziness, in addition to acting as a euphoriator. Ideal for romantic ambiences.", badMisture: "As it is a very sweet floral scent, combine with a very citrusy element to balance", niceMistures: ["Lemon", "Passion Fruit"]

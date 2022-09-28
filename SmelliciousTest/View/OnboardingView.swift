@@ -4,26 +4,51 @@ import SwiftUI
 import UIKit
 import WebKit
 
+//struct OnboardingView: View {
+//
+//
+//    var body: some View {
+//
+//        ZStack{
+//            CombineEssencesView()
+//        }
+//        .sheet(isPresented: $showSheet, content: {
+//            TabView {
+//                WelcomeView()
+//                DragAndDropView()
+//                PropertiesView(showSheet: $showSheet)
+//            }
+//            .edgesIgnoringSafeArea(.all)
+//            .tabViewStyle(.page)
+//        })
+//    }
+//}
+
 struct OnboardingView: View {
-    
+    @AppStorage("showsOnboard") var showsOnboard: Bool = true
     @State var showSheet: Bool = true
+    
     
     var body: some View {
         
         ZStack{
             CombineEssencesView()
         }
-        .sheet(isPresented: $showSheet, content: {
+        .sheet(isPresented: $showsOnboard, onDismiss: onDismiss, content: {
             TabView {
                 WelcomeView()
                 DragAndDropView()
-                PropertiesView(showSheet: $showSheet)
+                PropertiesView(showsOnboard: $showsOnboard)
             }
             .edgesIgnoringSafeArea(.all)
             .tabViewStyle(.page)
         })
     }
+    func onDismiss() {
+        showsOnboard = false
+    }
 }
+
 
 struct WelcomeView: View {
     var body: some View{
@@ -102,7 +127,7 @@ struct DragAndDropView: View {
 
 struct PropertiesView: View {
     
-    @Binding var showSheet: Bool
+    @Binding var showsOnboard: Bool
     
     var body: some View{
         ZStack{
@@ -141,7 +166,7 @@ struct PropertiesView: View {
                     .padding(.bottom,30)
                 
                 Button(action: {
-                    showSheet.toggle()
+                    showsOnboard.toggle()
                 }, label: {
                     Text("Let's go!")
                     .foregroundColor(Color(red: 50/255, green: 73/255, blue: 60/255))
