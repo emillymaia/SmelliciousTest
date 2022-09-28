@@ -40,18 +40,18 @@ var essences_: [EssenceModel] = [
                 ),
     EssenceModel(value: "Coconut", icon: "Coco",
                  smokeColor:"brownSmoke",textDescription: "Stimulates well-being. Calms the nerves and promotes spiritual peace. In addition, it has soothing properties for the skin, reducing inflammation and promoting hydration.", badMisture: "Coconut is a sweet fruity essence. Try combining it with more acidic elements.",
-                 niceMistures: ["Lemon", "Passion Fruit"]
+                 niceMistures: ["Lemon", "Passion Fruit", "Tangerine"]
                 ),
     EssenceModel(value: "Tangerine", icon: "Tangerina",
                  smokeColor:"orangeSmoke",textDescription: "Cheerful aroma, acts as a stimulant, reducing stress and increasing energy to produce.", badMisture: "Being citrusy, tangerine goes well with minty, sweety or woody essences. Try these combinations, you will love it!",
                  niceMistures: ["Cinnamon", "Vanilla", "Cotton", "Peppermint"]
                 ),
     EssenceModel(value: "Cherry Blossom", icon: "Cerejeira",
-                 smokeColor: "pinkSmoke",textDescription: "With a floral and sweet aroma, it transmits a sensation of comfort and coziness, in addition to acting as a euphoriator. Ideal for romantic ambiences.", badMisture: "As it is a very sweet floral scent, combine with a very citrusy element to balance", niceMistures: ["Lemon", "Passion Fruit"]
+                 smokeColor: "pinkSmoke",textDescription: "With a floral and sweet aroma, it transmits a sensation of comfort and coziness, in addition to acting as a euphoriator. Ideal for romantic ambiences.", badMisture: "As it is a very sweet floral scent, combine with a very citrusy element to balance", niceMistures: ["Lemon", "Passion Fruit", "Tangerine"]
                 ),
     EssenceModel(value: "Ylang Ylang", icon: "Ylang",
                  smokeColor:"yellowSmoke",textDescription: "It has aphrodisiac properties and exotic aroma, in addition to decreasing nervous and muscular tension.", badMisture: "Ylang Ylang is a floral element, try it with woody elements and discover your new passion!",
-                 niceMistures: ["Cotton", "Roses", "Cinnamon"]
+                 niceMistures: ["Cotton", "Cinnamon"]
                 ),
     EssenceModel(value: "Vanilla", icon: "Baunilha",
                  smokeColor:"vanillaSmoke",textDescription: "It has a fragrant, sweet and delicate aroma. In aromatherapy, it helps to alleviate the effects of anxiety, nervousness, depression and insomnia.", badMisture: "Because it is a sweet aroma, vanilla should be combined with citrus or floral aromas for a better result.",
@@ -70,12 +70,12 @@ var essences_: [EssenceModel] = [
                  niceMistures: ["Ylang Ylang", "Roses", "Lavender"]
                 ),
     EssenceModel(value: "Lemon", icon: "Limao",
-                 smokeColor:"greenSmoke", textDescription: "It has a citrus and light aroma. It promotes concentration in studies and work, as well as improving mood and physical and mental resistance to stress.", badMisture: "Due to its citricity, lemon goes well with sweet, floral, citrus or woody essences. Try one of these combinations, you will love it!",
-                 niceMistures: ["Peppermint", "Roses", "Tangerine", "Vanilla", "Ylang Ylang", "Cherry Blossom", "Coconut"]
+                 smokeColor:"greenSmoke", textDescription: "It has a citrus and light aroma. It promotes concentration in studies and work, as well as improving mood and physical and mental resistance to stress.", badMisture: "Due to its citricity, lemon goes well with sweet, floral or woody essences. Try one of these combinations, you will love it!",
+                 niceMistures: ["Roses", "Vanilla", "Ylang Ylang", "Cherry Blossom", "Coconut", "Lavender", "Cinnamon", "Cotton"]
                 ),
     EssenceModel(value: "Roses", icon: "Rosas",
                  smokeColor: "redSmoke", textDescription: "With a sweet and pleasant aroma, it will be the calming element of the ambience, bringing peace, romanticism and sensuality.", badMisture: "Floral aromas match with woody essences. Try to combine and see what success!",
-                 niceMistures: ["Ylang Ylang", "Lavender", "Cotton" , "Cinnamon"]
+                 niceMistures: ["Cotton" , "Cinnamon"]
                 )
 ]
 
