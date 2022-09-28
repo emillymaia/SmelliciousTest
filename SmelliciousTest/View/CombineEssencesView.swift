@@ -145,6 +145,7 @@ struct CombineEssencesView: View {
                             .frame(width:330)
                             .padding(.top)
                         Text("Elements")
+                            .foregroundColor(Color.init( red: 0.19, green: 0.28, blue: 0.23))
                             .font(.system(.title, design: .rounded))
                             .frame(width: 132, height: 34, alignment: .bottom)
                         
@@ -184,6 +185,7 @@ struct CombineEssencesView: View {
                                 .opacity(isSelected ? 0.5 : 1.0)
                             
                             Text(row.value)
+                                .foregroundColor(Color.init( red: 0.19, green: 0.28, blue: 0.23))
                         }
                         // MARK: - Adding Drag Operation
                         .onDrag {

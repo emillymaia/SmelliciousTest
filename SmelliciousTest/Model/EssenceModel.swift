@@ -112,9 +112,8 @@ struct EssenceDescription: View {
     var body: some View {
         VStack(spacing: .zero) {
             Text(essence.value)
-                .font(
-                    .system(size: 18, weight: .bold)
-                )
+                .foregroundColor(Color.init( red: 0.19, green: 0.28, blue: 0.23))
+                .font(.system(.title, design: .rounded))
                 .padding()
             
             Image(essence.icon)
@@ -126,6 +125,9 @@ struct EssenceDescription: View {
 
           
             Text(essence.textDescription)
+                .font(.system(.title2, design: .rounded))
+                .foregroundColor(Color.init( red: 0.19, green: 0.28, blue: 0.23))
+
             Spacer()
         }
         .padding()
