@@ -48,7 +48,7 @@ struct popupView: View {
                         .foregroundColor(.white)
                         .font(.system(.title, design: .rounded))
 
-                    Text(essence1?.badMisture ?? "F")
+                    Text(essence1?.badMisture ?? " ")
                         .foregroundColor(.white)
                         .font(.system(size: 14, design: .rounded))
                         .padding(.trailing, 10)
