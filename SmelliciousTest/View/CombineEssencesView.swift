@@ -132,7 +132,9 @@ struct CombineEssencesView: View {
                                 }
                                 essence1 = droppedEssence
                                 checkMisture()
-                                drop()
+                                if isPlaying == true{
+                                    drop()
+                                }
                                 smokeName = (essence1?.smokeColor)!
                             }
                             
@@ -145,7 +147,9 @@ struct CombineEssencesView: View {
                                 }
                                 essence2 = droppedEssence
                                 checkMisture()
-                                drop()
+                                if isPlaying == true{
+                                    drop()
+                                }
                                 smokeName = (essence2?.smokeColor)!
                             }
                         }
@@ -203,7 +207,9 @@ struct CombineEssencesView: View {
                         }
                         // MARK: - Adding Drag Operation
                         .onDrag {
-                            drag()
+                            if isPlaying == true{
+                                drag()
+                            }
                             //Returning ID to find wich Item is Moving
                             if row.id == essence1?.id || row.id == essence2?.id {
                                 return NSItemProvider()
