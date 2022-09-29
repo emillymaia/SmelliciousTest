@@ -59,7 +59,7 @@ struct WelcomeView: View {
             VStack{
                 Image("diff")
                     .resizable()
-                    .frame(width: 129, height: 225, alignment: .center)
+                    .frame(width: 225, height: 239, alignment: .center)
                 
                 Spacer().frame(height: 35)
                 
