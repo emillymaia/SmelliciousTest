@@ -66,7 +66,7 @@ struct CombineEssencesView: View {
             print(error.localizedDescription)
         }
         humidify.play()
-        humidify.volume = 0.2
+        humidify.volume = 0.4
         humidify.numberOfLoops = 5
     }
     
@@ -92,7 +92,7 @@ struct CombineEssencesView: View {
                 isPlaying = true
             }
         }label: {
-            Image(systemName: isPlaying ? "speaker.slash" : "speaker.wave.2")
+            Image(systemName: isPlaying ? "speaker.wave.2" :  "speaker.slash")
                 .resizable()
         }
         .foregroundColor(.black)
@@ -100,6 +100,7 @@ struct CombineEssencesView: View {
     
     
     var body: some View {
+        
         NavigationView {
             ZStack{
                 Color.init(red: 235/255, green: 252/255, blue: 225/255)
@@ -169,15 +170,16 @@ struct CombineEssencesView: View {
                     }
             }
         }
+        .onAppear(perform: {
+            playSounds("humidifySound.mp3")
+        })
         .overlay {
             if sparkles {
                 LottieView(name: "confete")
             }
         
             popupView(popupPositive: $popupPositive, popupNegative: $popupNegative, smokeName: $smokeName, essence1: $essence1, essence2: $essence2, sparkles: $sparkles)
-                .onAppear(perform: {
-                    playSounds("humidifySound.mp3")
-                })
+                
         }
     }
     
