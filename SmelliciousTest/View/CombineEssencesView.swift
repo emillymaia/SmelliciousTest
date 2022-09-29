@@ -21,38 +21,40 @@ struct CombineEssencesView: View {
     @State var audioPlayer: AVAudioPlayer!
     @State var humidify: AVAudioPlayer!
     @State var isPlaying = true
+    @State var positiveFeedback = "Sparkless"
+    @State var sparkles = false
     
     func drag(){
         let pathSounds = Bundle.main.path(forResource: "drag", ofType: "wav")!
-                let url = URL(fileURLWithPath: pathSounds)
-    do
-          {
-              audioPlayer = try AVAudioPlayer(contentsOf: url)
-              audioPlayer?.play()
-              audioPlayer.volume = 0.3
-              
-          }catch{
-              print(error)
-              
-          }
-          
-      }
+        let url = URL(fileURLWithPath: pathSounds)
+        do
+        {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer?.play()
+            audioPlayer.volume = 0.3
+            
+        }catch{
+            print(error)
+            
+        }
+        
+    }
     
     func drop(){
         let pathSounds = Bundle.main.path(forResource: "drop", ofType: "wav")!
-                let url = URL(fileURLWithPath: pathSounds)
-    do
-          {
-              audioPlayer = try AVAudioPlayer(contentsOf: url)
-              audioPlayer?.play()
-              audioPlayer.volume = 0.3
-              
-          }catch{
-              print(error)
-              
-          }
-          
-      }
+        let url = URL(fileURLWithPath: pathSounds)
+        do
+        {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer?.play()
+            audioPlayer.volume = 0.3
+            
+        }catch{
+            print(error)
+            
+        }
+        
+    }
     
     func playSounds(_ humidifySound : String) {
         guard let soundURL = Bundle.main.url(forResource: humidifySound, withExtension: nil) else {
@@ -168,7 +170,11 @@ struct CombineEssencesView: View {
             }
         }
         .overlay {
-            popupView(popupPositive: $popupPositive, popupNegative: $popupNegative, smokeName: $smokeName, essence1: $essence1, essence2: $essence2)
+            if sparkles {
+                LottieView(name: "confete")
+            }
+        
+            popupView(popupPositive: $popupPositive, popupNegative: $popupNegative, smokeName: $smokeName, essence1: $essence1, essence2: $essence2, sparkles: $sparkles)
                 .onAppear(perform: {
                     playSounds("humidifySound.mp3")
                 })
@@ -189,29 +195,28 @@ struct CombineEssencesView: View {
                             let isSelected = row == essence1 || row == essence2
                             ImageElementComponent(essence: row)
                                 .opacity(isSelected ? 0.5 : 1.0)
-                                .contentShape(.dragPreview, Circle())
-                                .onDrag {
-                                    drag()
-                                    //Returning ID to find wich Item is Moving
-                                    if row.id == essence1?.id || row.id == essence2?.id {
-                                        return NSItemProvider()
-                                    } else {
-                                        return .init(contentsOf: URL(string:row.id))!
-                                    }
-                                } preview: {
-                                    Image(row.icon)
-                                        .resizable()
-                                        .cornerRadius(900)
-                                        .frame(width: SizesComponents.widthScreen*0.20,
-                                               height: SizesComponents.widthScreen*0.20, alignment: .leading)
-                                        .contentShape(.dragPreview, Circle())
-                                    //                                .disabled(true)
-                                }
+                            
                             Text(row.value)
                                 .foregroundColor(Color.init( red: 0.19, green: 0.28, blue: 0.23))
                         }
                         // MARK: - Adding Drag Operation
-                        
+                        .onDrag {
+                            drag()
+                            //Returning ID to find wich Item is Moving
+                            if row.id == essence1?.id || row.id == essence2?.id {
+                                return NSItemProvider()
+                            } else {
+                                return .init(contentsOf: URL(string:row.id))!
+                            }
+                        } preview: {
+                            Image(row.icon)
+                                .resizable()
+                                .cornerRadius(900)
+                                .frame(width: SizesComponents.widthScreen*0.20,
+                                       height: SizesComponents.widthScreen*0.20, alignment: .leading)
+                                .contentShape(.dragPreview, Circle())
+                            //                                .disabled(true)
+                        }
                     }
                 }
             }
@@ -235,9 +240,19 @@ struct CombineEssencesView: View {
         
         
         if essence2.niceMistures.contains(essence1.value) {
-            withAnimation {
-                popupPositive = true
+            
+            DispatchQueue.main.async {
+                withAnimation {
+                    sparkles = true
+                }
             }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                withAnimation {
+                    popupPositive = true
+                }
+            }
+            
             
         } else {
             withAnimation {

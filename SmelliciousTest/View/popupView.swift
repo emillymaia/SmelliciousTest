@@ -13,7 +13,8 @@ struct popupView: View {
     @Binding var smokeName: String
     @Binding var essence1: EssenceModel?
     @Binding var essence2: EssenceModel?
-    
+    @Binding var sparkles: Bool
+
     var body: some View {
         
         if popupNegative {
@@ -105,6 +106,7 @@ struct popupView: View {
             
             Button(action: {
                 resetEssence()
+                sparkles = false
                 withAnimation {
                     popupPositive = false
                 }

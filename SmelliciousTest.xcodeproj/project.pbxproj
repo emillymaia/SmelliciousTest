@@ -39,6 +39,7 @@
 		ABC281E628E3E54900845937 /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = ABC281D428E333FF00845937 /* BottomSheet */; };
 		ABC281E828E3E56D00845937 /* drag.wav in Resources */ = {isa = PBXBuildFile; fileRef = ABC281E728E3E56D00845937 /* drag.wav */; };
 		ABC281EA28E3E57900845937 /* drop.wav in Resources */ = {isa = PBXBuildFile; fileRef = ABC281E928E3E57900845937 /* drop.wav */; };
+		ABC281FC28E517D600845937 /* confete.json in Resources */ = {isa = PBXBuildFile; fileRef = ABC281FB28E517D600845937 /* confete.json */; };
 		AE06D3E228E29A08009140EC /* humidifySound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE06D3E128E29A08009140EC /* humidifySound.mp3 */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +93,7 @@
 		ABBBC5E228D3543900AF7895 /* CombineEssencesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineEssencesViewModel.swift; sourceTree = "<group>"; };
 		ABC281E728E3E56D00845937 /* drag.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = drag.wav; sourceTree = "<group>"; };
 		ABC281E928E3E57900845937 /* drop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = drop.wav; sourceTree = "<group>"; };
+		ABC281FB28E517D600845937 /* confete.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = confete.json; sourceTree = "<group>"; };
 		AE06D3E128E29A08009140EC /* humidifySound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = humidifySound.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +132,7 @@
 				0DBACC8A28D8ABB200DAE036 /* pinkSmoke.json */,
 				0D3704BC28E1DFB4004CB713 /* brownSmoke.json */,
 				0DBACC8E28D8ABB200DAE036 /* purpleSmoke.json */,
+				ABC281FB28E517D600845937 /* confete.json */,
 				0D3704BE28E1DFBA004CB713 /* greenSmoke.json */,
 				0D3704BA28E1DFAE004CB713 /* defaultSmoke.json */,
 				0DBACC8728D8ABB200DAE036 /* redSmoke.json */,
@@ -367,6 +370,7 @@
 				AE06D3E228E29A08009140EC /* humidifySound.mp3 in Resources */,
 				ABC281E828E3E56D00845937 /* drag.wav in Resources */,
 				ABBBC5B628D351E800AF7895 /* Preview Assets.xcassets in Resources */,
+				ABC281FC28E517D600845937 /* confete.json in Resources */,
 				0DBACC9228D8ABB200DAE036 /* orangeSmoke.json in Resources */,
 				ABBBC5B328D351E800AF7895 /* Assets.xcassets in Resources */,
 				0D3704BB28E1DFAE004CB713 /* defaultSmoke.json in Resources */,
