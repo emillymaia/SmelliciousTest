@@ -93,11 +93,11 @@ struct popupView: View {
                 VStack(alignment: .leading) {
                     Text("Yaaaay!")
                         .padding(.top,3)
-                        .foregroundColor(.white)
+                        .foregroundColor(Color.init( red: 0.19, green: 0.28, blue: 0.23))
                         .font(.system(.title, design: .rounded))
                     
                     Text("Your combination is a success! Enjoy your new scent. How about reading a book to make this moment even more perfect?")
-                        .foregroundColor(.white)
+                        .foregroundColor(Color.init( red: 0.19, green: 0.28, blue: 0.23))
                         .font(.system(size: 14, design: .rounded))
                         .padding(.trailing, 10)
                 }

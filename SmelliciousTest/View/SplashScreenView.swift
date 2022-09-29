@@ -14,7 +14,7 @@ struct SplashScreenView: View {
                     .edgesIgnoringSafeArea(.all)
                 VStack {
                     Image("Logo")
-                        .frame(width: 330, height: 660, alignment: .center)
+                        .frame(width: 323, height: 662, alignment: .center)
                         .scaleEffect(size)
                         .opacity(opacity)
                         .onAppear {

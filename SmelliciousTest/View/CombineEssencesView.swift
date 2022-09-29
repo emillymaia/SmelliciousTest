@@ -180,6 +180,7 @@ struct CombineEssencesView: View {
         .overlay {
             if sparkles {
                 LottieView(name: "confete")
+                    .offset(x: 0, y: -200)
             }
         
             popupView(popupPositive: $popupPositive, popupNegative: $popupNegative, smokeName: $smokeName, essence1: $essence1, essence2: $essence2, sparkles: $sparkles)
