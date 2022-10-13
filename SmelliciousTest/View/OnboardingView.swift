@@ -4,27 +4,7 @@ import SwiftUI
 import UIKit
 import WebKit
 
-//struct OnboardingView: View {
-//
-//
-//    var body: some View {
-//
-//        ZStack{
-//            CombineEssencesView()
-//        }
-//        .sheet(isPresented: $showSheet, content: {
-//            TabView {
-//                WelcomeView()
-//                DragAndDropView()
-//                PropertiesView(showSheet: $showSheet)
-//            }
-//            .edgesIgnoringSafeArea(.all)
-//            .tabViewStyle(.page)
-//        })
-//    }
-//}
-
-struct OnboardingView: View {
+public struct OnboardingView: View {
     @AppStorage("showsOnboard") var showsOnboard: Bool = true
     @State var showSheet: Bool = true
     
@@ -50,7 +30,7 @@ struct OnboardingView: View {
 }
 
 
-struct WelcomeView: View {
+public struct WelcomeView: View {
     var body: some View{
         ZStack{
             Color.init(red: 0.89, green: 0.88, blue: 0.99)
@@ -85,7 +65,7 @@ struct WelcomeView: View {
     }
 }
 
-struct DragAndDropView: View {
+public struct DragAndDropView: View {
     var body: some View{
         ZStack{
             Color.init( red: 0.89, green: 0.88, blue: 0.99 )
@@ -125,7 +105,7 @@ struct DragAndDropView: View {
     }
 }
 
-struct PropertiesView: View {
+public struct PropertiesView: View {
     
     @Binding var showsOnboard: Bool
     
@@ -183,7 +163,7 @@ struct PropertiesView: View {
 
 
 
-struct OnboardingView_Previews: PreviewProvider {
+public struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
         OnboardingView()
     }
