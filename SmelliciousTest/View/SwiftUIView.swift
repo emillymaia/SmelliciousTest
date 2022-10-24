@@ -15,7 +15,6 @@ struct SwiftUIView: View {
     @Binding var essence2: EssenceModel?
     
     var body: some View {
-        
         if popoverNegative {
             VisualEffectView(effect: UIBlurEffect(style: .light))
                 .edgesIgnoringSafeArea(.all)
@@ -23,7 +22,7 @@ struct SwiftUIView: View {
                 .fill(Color(red: 0.89, green: 0.95, blue: 0.91))
                 .frame(width: 400, height: 200)
                 .overlay {
-                    Text("AFFFFF!")
+                    Text("AFFFFF :( !")
                         .foregroundColor(Color(red: 0.20, green: 0.29, blue: 0.24))
                         .font(Font.title.weight(.bold))
                         .font(.system(size: 25))
@@ -45,7 +44,7 @@ struct SwiftUIView: View {
                         }
                         
                     }) {
-                        Text("Dimiss")
+                        Text("Dismiss")
                             .frame(width: 400 , height: 50, alignment: .center)
                             .background(Color(.white))
                             .foregroundColor(.black)
@@ -56,8 +55,6 @@ struct SwiftUIView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 20))
                 .transition(.scale)
         }
-        
-        
         if popoverPositive {
             VisualEffectView(effect: UIBlurEffect(style: .light))
                 .edgesIgnoringSafeArea(.all)
@@ -65,7 +62,7 @@ struct SwiftUIView: View {
                 .fill(Color(red: 0.89, green: 0.95, blue: 0.91))
                 .frame(width: 400, height: 200)
                 .overlay {
-                    Text("YAAAAY!")
+                    Text("YAAAAY :3 !")
                         .foregroundColor(Color(red: 0.20, green: 0.29, blue: 0.24))
                         .font(Font.title.weight(.bold))
                         .font(.system(size: 25))
@@ -86,7 +83,7 @@ struct SwiftUIView: View {
                             popoverPositive = false
                         }
                     }) {
-                        Text("Dimiss")
+                        Text("Dismiss")
                             .frame(width: 400 , height: 50, alignment: .center)
                             .background(Color(.white))
                             .foregroundColor(.black)
@@ -96,8 +93,7 @@ struct SwiftUIView: View {
                 }
                 .clipShape(RoundedRectangle(cornerRadius: 20))
                 .transition(.scale)
-        }
-        
+        } 
     }
     func resetEssence() {
         smokeName = "defaultSmoke"
@@ -105,9 +101,6 @@ struct SwiftUIView: View {
         essence2 = nil
     }
 }
-
-
-
 struct VisualEffectView: UIViewRepresentable {
     var effect: UIVisualEffect?
     func makeUIView(context: UIViewRepresentableContext<Self>) -> UIVisualEffectView { UIVisualEffectView() }
