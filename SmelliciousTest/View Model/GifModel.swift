@@ -4,10 +4,9 @@ import WebKit
 
 struct GifImage: UIViewRepresentable {
     private let name: String
-    
     init(_ name: String) {
         self.name = name
-    }
+    } 
     
     func makeUIView(context: Context) -> WKWebView {
         let webView = WKWebView()
@@ -20,12 +19,11 @@ struct GifImage: UIViewRepresentable {
             baseURL: url.deletingLastPathComponent()
         )
         webView.scrollView.isScrollEnabled = false
-        
         return webView
     }
     
     func updateUIView(_ uiView: WKWebView, context: Context) {
         uiView.reload()
-    }
-    
+        print("Atualizou!!!")
+    } 
 }
