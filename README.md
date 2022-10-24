@@ -19,7 +19,7 @@
    This app was developed within the Apple Academy during the "Delightful Interfaces" challenge. The proposal was to make a screen that is pleasant and delicious for the user. With that in mind, we made Smellicious. <br>
    We studied and analyzed a lot and saw that smell influences our perception of the world. In an intuitive and fun way, you drag the essences you have and have feedback to know if the essences match, and if they don't, to know why. <br>
    Made using UIKIT and SwiftUI, it was all built and is still available on TestFlight! <br>
-   Check it out and we are open to feedback! Thanks!  <br>
+   Check it out and we are open to feedback! Thank you so much!  <br>
    <b> <a href="https://lnkd.in/ehhRyCwU">Available on TestFlight</a></b>
    <br>
     <br>
